@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/right.css">
+    <!--滑动输入范围-->
+    <link rel="stylesheet" href="js/jquery.range/jquery.range.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--底部圖片輪播-->
+    <script src="js/slider.js"></script>
+    <!-- 弹出日期选择 -->
+    <script type="text/javascript" src="js/lhgcore.js"></script>
+    <script type="text/javascript" src="js/lhgcalendar.js"></script>
+    <script type="text/javascript" src="js/jquery.range/jquery.range.js"></script>
+
+
+</head>
+<body>
+    <!--头部-->
+    <div class="public-header">
+        <div class="wrap clearfix">
+            <div class="logo fl">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="會所一號">
+                </a>
+            </div>
+            <div class="contact fr">
+                <h4 class="contact-label">網上客戶服務熱線</h4>
+                <p class="contact-tel">致電：82099633</p>
+                <p class="contact-explain">（星期一至星期日9:30am至7:00pm）</p>
+            </div>
+        </div>
+    </div>
+    <!--头部菜单-->
+    <div class="public-header-menu">
+        <div class="wrap clearfix">
+            <ul class="left-item fl clearfix">
+                <li class="active">
+                    <span>首頁</span>
+                </li>
+                <li><span>優惠婚宴搜尋</span></li>
+                <li>
+                    <span>婚宴埸地<i class="icon"></i></span>
+                    <div class="sub-menu" style="">
+                        <div class="item">
+                            <span>九龍東</span>
+                        </div>
+                        <div class="item">
+                            <span>九龍半山<i class="icon"></i></span>
+                            <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>銀灘</span>
+                        </div>
+                        <div class="item">
+                            <span>郵輪堤岸</span>
+                        </div>
+                        <div class="item">
+                            <span>德藝會</span>
+                        </div>
+                        <div class="item">
+                            <span>博藝會<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>大舞臺</span>
+                        </div>
+                        <div class="item">
+                            <span>萬濤</span>
+                        </div>
+                        <div class="item">
+                            <span>淺水灣<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>科學園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>海濱長廊</span>
+                        </div>
+                        <div class="item">
+                            <span>太子東堤</span>
+                        </div>
+                        <div class="item">
+                            <span>愉花園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span>限時優惠</span><i class="new-tips"></i></li>
+                <li><span>會員優惠</span></li>
+            </ul>
+            <ul class="right-item fr clearfix">
+                <li class="service">
+                    <a href="javascript:;" class="service-btn">客戶服務<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">常見問題</a>
+                        <a href="">聯絡我們</a>
+                        <a href="">網站意見</a>
+                    </div>
+                </li>
+                <li><span class="line"></span></li>
+                <li class="reg-login">
+                    <a href="javascript:;" class="reg-login-btn">登入或註冊<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">登入</a>
+                        <a href="">建立賬戶</a>
+                        <a href="">我的預訂</a>
+                        <a href="">我的最愛埸地</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-bg"></div>
+    <!-- 主体 -->
+    <!-- 搜索 -->
+    <div class="search-wrap">
+        <form class="wrap" name="reg_testdate">
+            <div class="item address">
+                <p class="tit red">地區/埸地*</p>
+                <div class="con">
+                     <div class="select-box-wrap">
+                           <div class="select-box">
+                                <span class="text">請選擇地區/埸地</span>
+                                <span class="icon"></span>
+                           </div>
+                           <!-- 地址下拉選擇內容 -->
+                           <div class="select-option" style="display:none;">
+                                <div class="option-content">
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="a" class="checkbox-label">
+                                                <input id="a" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">香港區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="a1" class="checkbox-label">
+                                                <input id="a1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>淺水灣</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="a2" class="checkbox-label" >
+                                                <input id="a2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>大舞臺</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="b" class="checkbox-label">
+                                                <input id="b" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">九龍區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="b1" class="checkbox-label">
+                                                <input id="b1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍東</span>
+                                            </label>
+                                            <label for="b2" class="checkbox-label">
+                                                <input id="b2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍半山</span>
+                                            </label>
+                                            <label for="b3" class="checkbox-label">
+                                                <input id="b3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>太子東提</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="b4" class="checkbox-label">
+                                                <input id="b4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>博藝會</span>
+                                            </label>
+                                             <label for="b5" class="checkbox-label">
+                                                <input id="b5" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>郵輪堤岸 </span>
+                                            </label>
+                                             <label for="b6" class="checkbox-label">
+                                                <input id="b6" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>海濱長廊</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="c" class="checkbox-label">
+                                                <input id="c" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">新界區 </span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="c1" class="checkbox-label">
+                                                <input id="c1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>愉花園 </span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c2" class="checkbox-label">
+                                                <input id="c2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>科學園</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c3" class="checkbox-label">
+                                                <input id="c3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>萬濤</span>
+                                            </label>
+                                            <label for="c4" class="checkbox-label">
+                                                <input id="c4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>銀灘</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                                                                      
+                             
+                                    <!-- 所有地区 -->
+                                     <div class="option-item all-option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="d" class="checkbox-label">
+                                                <input id="d" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">所有地區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- 确定按钮 -->
+                                    <div class="btn-wrap">
+                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                    </div>
+                                </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item date">
+                <p class="tit red">婚宴日期*</p>
+                <div class="con">
+                    <select id='year' name="YYYY" onChange="YYYYDD(this.value)">
+                        <option value="">请选择 年</option>
+                    </select>
+                    <select id='month' name="MM" onChange="MMDD(this.value)">
+                        <option value="">选择 月</option>
+                    </select>
+                    <select id="day" name="DD">
+                        <option value="">选择 日</option>
+                    </select>
+                    <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:''});"></a>
+                </div>
+            </div>
+            <div class="item"> 
+                <p class="tit red">时段*</p>
+                <div class="con">
+                    <select class="red-select" name="" id="">
+                        <option value="">晚間</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item count">
+                <p class="tit red">預計席數</p>
+                <div class="con">
+                    <select class="red-select" name="" id="">
+                        <option value="">未定</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item">
+                <p class="tit" style="text-align: right;font-size:13px;">*必需選擇</p>
+                <div class="con">
+                    <a href="javascript:;" class="change-search  bg-img"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--中間部分-->
+    <div class="content">
+        <div class="wrap clearfix">
+            <!--中间左边-->
+            <div class="content-left fl">
+                <!--筛选-->
+                <div class="sift list">
+                    <div class="tit">篩選</div>
+                    <div class="con">
+                        <div class="item border-bottom" style="padding-bottom:20px;">
+                            <h6 class="tit-1">婚宴類型</h6>
+                            <select name="" id="">
+                                <option value="">中式婚宴</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <h6 class="tit-1" style="line-height: 38px;">最低消費</h6>
+                            <div class="range-wrap">
+                                <input class="range-slider" id="range-slider" type="hidden" value="2,30"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--客户服务热线-->
+                <div class="tel-hot list clearfix">
+                    <div class="left fl"></div>
+                    <div class="right fl">
+                        <h6 class="tit">客戶服務熱線</h6>
+                        <p><span>時間：</span><span>9:30am</span><span>－</span><span>7:00pm</span></p>
+                        <p><sapn>电话：</sapn><span>82099633</span></p>
+                    </div>
+                </div>
+                <!--邮箱-->
+                <div class="email list">
+                    <div class="top">
+                        <span class="icon"></span>
+                        <span>訂閱電郵，優先收到特惠情報</span>
+                    </div>
+                    <div class="bottom">
+                        <input type="text" class="email-text">
+                        <a href="javascript:;" class="send-btn"></a>
+                    </div>
+                </div>
+                <!--场地推介-->
+                <div class="recommend list">
+                    <div class="tit">場地推介</div>
+                    <div class="con">
+                        <div class="item border-bottom clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                        <div class="item border-bottom clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--立即加入-->
+                <div class="publicity list">
+                    <a href=""><img src="images/Page-2-night_11.png" alt=""></a>
+                </div>
+                <!--我最近浏览过的埸地-->
+                <div class="recently recommend list">
+                    <div class="tit">我最近瀏覽過的埸地</div>
+                    <div class="con">
+                        <div class="item border-bottom clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                        <div class="item border-bottom clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="img fl">
+                                <img src="images/right_content_left_1.png" alt="">
+                            </div>
+                            <div class="right-text fl">
+                                <h6 class="tit-1">淺水灣</h6>
+                                <p>最新預訂：32分鍾前</p>
+                                <p>10位客人正在瀏覽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--星級個人化服務-->
+                <div class="individuation lilst">
+                    <div class="tit">
+                        星級個人化服務
+                    </div>
+                    <div class="con clearfix">
+                        <div class="img fl">
+                            <img src="images/bottom_service_img.png" alt="">
+                        </div>
+                        <div class="right-text fl">
+                            <p class="li-item"><span class="icon"></span><span>席前酒會</span></p>
+                            <p class="li-item"><span class="icon"></span><span>主題婚宴</span></p>
+                            <p class="li-item"><span class="icon"></span><span>婚禮策劃</span></p>
+                            <p class="li-item"><span class="icon"></span><span>律師證婚服務</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--中间右边-->
+            <div class="content-right fr">
+                <!--搜索-->
+                <div class="search-content">
+                    <div class="tips-title clearfix">
+                        <div class="fl"><span style="margin-right:5px;">2016年11月12日</span><span>婚宴埸地搜索结果</span></div>
+                        <div class="fr">
+                            <select name="" id="">
+                                <option value="">按價格從低至高</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--搜索内容-->
+                    <div class="list">
+                        <div class="content">
+                            <div class="tit">
+                                <div class="item"><span>萬濤</span></div>
+                                <div class="item bg"><span>7折優惠</span></div>
+                                <div class="item text-right"><span>2016年11日14日</span></div>
+                            </div>
+                            <div class="top clearfix">
+                                <div class="carousel fl">
+                                    <div class="slider">
+                                        <div class="ul-box">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="mask"></div>-->
+                                        <div class="prev"></div>
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+                                <div class="info fl">
+                                    <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                                    <div style="margin-bottom:8px;">可容納席數24席</div>
+                                    <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                                    <div class="option" style="width:300px;">
+                                        <div class="item c-j bg-img">
+                                        </div>
+                                        <div class="item d-p bg-img">
+                                        </div>
+                                        <div class="item t-z bg-img">
+                                        </div>
+                                        <div class="item t-s bg-img">
+                                        </div>
+                                        <!--<div class="item s-s">
+                                        </div>
+                                        <div class="item l-y">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-text">今日已有 71人瀏覽這場地</div>
+                                    <div class="item-text">曾於3日16小時前被成功預訂</div>
+                                    <div class="item-text">11月份剩下 15天可預訂</div>
+                                </div>
+                            </div>
+                            <div class="bottom-list">
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                            </div>
+                            <div class="bottom-con">
+                                <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                                <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                            </div>
+                        </div>
+                        <!--进行中-->
+                        <div class="content underway">
+                            <div class="tit">
+                                <div class="item"><span>萬濤</span></div>
+                                <div class="item bg"><span>7折優惠</span></div>
+                                <div class="item text-right"><span>2016年11日14日</span></div>
+                            </div>
+                            <div class="top clearfix">
+                                <div class="carousel fl">
+                                    <div class="slider">
+                                        <div class="ul-box">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="mask"></div>-->
+                                        <div class="prev"></div>
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+                                <div class="info fl">
+                                    <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                                    <div style="margin-bottom:8px;">可容納席數24席</div>
+                                    <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                                    <div class="option" style="width:300px;">
+                                        <div class="item c-j bg-img">
+                                        </div>
+                                        <div class="item d-p bg-img">
+                                        </div>
+                                        <div class="item t-z bg-img">
+                                        </div>
+                                        <div class="item t-s bg-img">
+                                        </div>
+                                        <!--<div class="item s-s">
+                                        </div>
+                                        <div class="item l-y">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-text">今日已有 71人瀏覽這場地</div>
+                                    <div class="item-text">曾於3日16小時前被成功預訂</div>
+                                    <div class="item-text">11月份剩下 15天可預訂</div>
+                                </div>
+                            </div>
+                            <div class="bottom-list">
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                            </div>
+                            <div class="bottom-con">
+                                <div class="fl tips">
+                                    <span class="icon"></span>
+                                    <span style="color:#FCE909">18:30:20</span>
+                                    <span style="color:#fff">每日震撼優惠</span>
+                                </div>
+                                <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                                <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                            </div>
+                        </div>
+                        <!--同日其他埸地-->
+                        <div class="title">同日其他埸地</div>
+                        <div class="content">
+                            <div class="tit">
+                                <div class="item"><span>萬濤</span></div>
+                                <div class="item bg"><span>7折優惠</span></div>
+                                <div class="item text-right"><span>2016年11日14日</span></div>
+                            </div>
+                            <div class="top clearfix">
+                                <div class="carousel fl">
+                                    <div class="slider">
+                                        <div class="ul-box">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="mask"></div>-->
+                                        <div class="prev"></div>
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+                                <div class="info fl">
+                                    <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                                    <div style="margin-bottom:8px;">可容納席數24席</div>
+                                    <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                                    <div class="option" style="width:300px;">
+                                        <div class="item c-j bg-img">
+                                        </div>
+                                        <div class="item d-p bg-img">
+                                        </div>
+                                        <div class="item t-z bg-img">
+                                        </div>
+                                        <div class="item t-s bg-img">
+                                        </div>
+                                        <!--<div class="item s-s">
+                                        </div>
+                                        <div class="item l-y">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-text">今日已有 71人瀏覽這場地</div>
+                                    <div class="item-text">曾於3日16小時前被成功預訂</div>
+                                    <div class="item-text">11月份剩下 15天可預訂</div>
+                                </div>
+                            </div>
+                            <div class="bottom-list">
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                            </div>
+                            <div class="bottom-con">
+                                <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                                <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="tit">
+                                <div class="item"><span>萬濤</span></div>
+                                <div class="item bg"><span>7折優惠</span></div>
+                                <div class="item text-right"><span>2016年11日14日</span></div>
+                            </div>
+                            <div class="top clearfix">
+                                <div class="carousel fl">
+                                    <div class="slider">
+                                        <div class="ul-box">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="mask"></div>-->
+                                        <div class="prev"></div>
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+                                <div class="info fl">
+                                    <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                                    <div style="margin-bottom:8px;">可容納席數24席</div>
+                                    <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                                    <div class="option" style="width:300px;">
+                                        <div class="item c-j bg-img">
+                                        </div>
+                                        <div class="item d-p bg-img">
+                                        </div>
+                                        <div class="item t-z bg-img">
+                                        </div>
+                                        <div class="item t-s bg-img">
+                                        </div>
+                                        <!--<div class="item s-s">
+                                        </div>
+                                        <div class="item l-y">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-text">今日已有 71人瀏覽這場地</div>
+                                    <div class="item-text">曾於3日16小時前被成功預訂</div>
+                                    <div class="item-text">11月份剩下 15天可預訂</div>
+                                </div>
+                            </div>
+                            <div class="bottom-list">
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                            </div>
+                            <div class="bottom-con">
+                                <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                                <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--你也可能喜歡的埸地-->
+                <div class="like-content">
+                    <div class="tips-title clearfix">
+                        <div class="fl"><span>您也可能喜歡的埸地</span></div>
+                        <div class="fr">
+                        </div>
+                    </div>
+                    <!--内容列表-->
+                    <div class="list">
+                        <div class="content">
+                            <div class="tit">
+                                <div class="item"><span>萬濤</span></div>
+                                <div class="item bg"><span>7折優惠</span></div>
+                                <div class="item text-right"><span>2016年11日14日</span></div>
+                            </div>
+                            <div class="top clearfix">
+                                <div class="carousel fl">
+                                    <div class="slider">
+                                        <div class="ul-box">
+                                            <ul>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                                <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="mask"></div>-->
+                                        <div class="prev"></div>
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+                                <div class="info fl">
+                                    <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                                    <div style="margin-bottom:8px;">可容納席數24席</div>
+                                    <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                                    <div class="option" style="width:300px;">
+                                        <div class="item c-j bg-img">
+                                        </div>
+                                        <div class="item d-p bg-img">
+                                        </div>
+                                        <div class="item t-z bg-img">
+                                        </div>
+                                        <div class="item t-s bg-img">
+                                        </div>
+                                        <!--<div class="item s-s">
+                                        </div>
+                                        <div class="item l-y">
+                                        </div>-->
+                                    </div>
+                                    <div class="item-text">今日已有 71人瀏覽這場地</div>
+                                    <div class="item-text">曾於3日16小時前被成功預訂</div>
+                                    <div class="item-text">11月份剩下 15天可預訂</div>
+                                </div>
+                            </div>
+                            <div class="bottom-list">
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                                <div class="item">
+                                    <div class="left">晚間-中式婚宴</div>
+                                    <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                                    <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                                </div>
+                            </div>
+                            <div class="bottom-con">
+                                <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                                <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="public-footer">
+        <div class="wrap">
+            <div class="top">
+                <a href="">手機版網頁</a>
+                <a href="">常見問題</a>
+                <a href="">使用條款</a>
+                <a href="">聯絡我們</a>
+            </div>
+            <div class="middle">
+                <a href="" class="bottom-logo">logo</a>
+                <span class="line"></span>
+                <a href="" class="spotlight">博藝會</a>
+                <span class="line"></span>
+                <a href="" class="grand-stage">西港城•大舞壹</a>
+                <span class="line"></span>
+                <a href="" class="kowloonPeak">九龍半山</a>
+                <span class="line"></span>
+                <a href="" class="kowloonEast">九龍東</a>
+                <span class="line"></span>
+                <a href="" class="wat-t">銀灘</a>
+                <span class="line"></span>
+                <a href="" class="har-t">郵輪堤岸</a>
+                <span class="line"></span>
+                <a href="" class="riverView">萬濤</a>
+                <span class="line"></span>
+                <a href="" class="ropulseBay">淺水灣</a>
+                <span class="line"></span>
+                <a href="" class="c-park">科學園</a>
+                <span class="line"></span>
+                <a href="" class="oneBayEast">海濱長廊</a>
+                <span class="line"></span>
+                <a href="" class="prince">太子東提</a>
+                <span class="line"></span>
+                <a href="" class="loom">愉花園</a>
+                <span class="line"></span>
+            </div>
+            <div class="bottom">
+                <p>Copyright &copy; 2016. ClubONE All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!--測邊工具條-->
+    <div class="side-bar">
+        <a href="" class="email"></a>
+        <a href="" class="line"></a>
+        <a href="" class="tel"></a>
+        <a href="" class="favorable"></a>
+        <a href="" class="compute"></a>
+    </div>
+    <script>
+        //日期选择
+        if(document.attachEvent)   
+            window.attachEvent("onload", YYYYMMDDstart);   
+        else   
+            window.addEventListener('load', YYYYMMDDstart, false);  
+       $(function(){
+
+           //隱藏下拉選擇
+            $('html').on('click',function(e){
+                //地區選擇
+                if(!$(e.target).hasClass('select-box-wrap') && !$(e.target).parents('div').hasClass('select-box-wrap')){
+                    $('.select-option').hide();
+                }
+                
+            })
+            //下拉选择
+            $('.select-box').click(function(){
+                if($('.select-option').is(":hidden")){
+                    $('.select-option').show();
+                }else{
+                    $('.select-option').hide();
+                }
+            })
+           //下拉地址选择
+           $('.confirm-btn').click(function(){
+               var isChecked = $('.option-item > .left > .checkbox-label').children('input:checked');
+               var text="";
+               for(var i = 0; i < isChecked.length;i++){
+                   if($(isChecked[i]).is(':checked')){
+                       if(i != isChecked.length-1){
+                           text+=$(isChecked[i]).siblings('.text').text()+'/';
+                       }else{
+                           text+=$(isChecked[i]).siblings('.text').text();
+                       }
+                   }
+
+               }
+               $('.select-box > .text').html(text);
+               $('.select-option').hide();
+
+           })
+           $('.option-item > .right > .checkbox-label').click(function(){
+               var checkboxs = $(this).parents('.right').find('input[type="checkbox"]');
+               for(var i = 0;i < checkboxs.length;i++){
+                   if($(checkboxs[i]).is(":checked")){
+                       $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=true;
+                       return;
+                   }
+               }
+               $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=false;
+           })
+
+           //滑动输入最低消费范围
+           $('.range-slider').jRange({
+               from: 2,
+               to: 30,
+               step: 1,
+               scale: [0,25,50,75,100],
+               format: '%s',
+               width: 218,
+               showLabels: true,
+               isRange : true,
+               unit:'萬'
+           });
+           //获取滑动输入的值
+           $('#range-slider').change(function () {
+               console.log($(this).val())
+           })
+           //
+           $('.bottom-list .item').click(function(){
+               $(this).addClass('active').siblings('.item').removeClass("active");
+           })
+       })
+    </script>
+
+    <script>
+        $(function(){
+            // 调用每一项的图片轮播
+            $('.slider').slider({
+                width : 330,
+                height : 208,
+                during : 2000, //动画执行间隔
+                speed : 500, //动画速度
+                btnSize : 20, //底部遮罩层的按钮大小
+                btnSpace : 10, //底部的按钮间隙
+                direction : 1 //轮播方向默认为1，图片向左移动
+            });
+
+
+        })
+    </script>
+</body>
+</html>

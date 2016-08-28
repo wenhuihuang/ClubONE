@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- 弹出日期选择 -->
+    <script type="text/javascript" src="js/lhgcore.js"></script>
+    <script type="text/javascript" src="js/lhgcalendar.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="public-header">
+        <div class="wrap clearfix">
+            <div class="logo fl">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="會所一號">
+                </a>
+            </div>
+            <div class="contact fr">
+                <h4 class="contact-label">網上客戶服務熱線</h4>
+                <p class="contact-tel">致電：82099633</p>
+                <p class="contact-explain">（星期一至星期日9:30am至7:00pm）</p>
+            </div>
+        </div>
+    </div>
+    <!--头部菜单-->
+    <div class="public-header-menu">
+        <div class="wrap clearfix">
+            <ul class="left-item fl clearfix">
+                <li class="active">
+                    <span>首页</span>
+                </li>
+                <li><span>優惠婚宴搜尋</span></li>
+                <li>
+                    <span>婚宴埸地<i class="icon"></i></span>
+                    <div class="sub-menu" style="">
+                        <div class="item">
+                            <span>九龍東</span>
+                        </div>
+                        <div class="item">
+                            <span>九龍半山<i class="icon"></i></span>
+                            <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>銀灘</span>
+                        </div>
+                        <div class="item">
+                            <span>郵輪堤岸</span>
+                        </div>
+                        <div class="item">
+                            <span>德藝會</span>
+                        </div>
+                        <div class="item">
+                            <span>博藝會<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>大舞臺</span>
+                        </div>
+                        <div class="item">
+                            <span>萬濤</span>
+                        </div>
+                        <div class="item">
+                            <span>淺水灣<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>科學園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>海濱長廊</span>
+                        </div>
+                        <div class="item">
+                            <span>太子東堤</span>
+                        </div>
+                        <div class="item">
+                            <span>愉花園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span>限時優惠</span><i class="new-tips"></i></li>
+                <li><span>會員優惠</span></li>
+            </ul>
+            <ul class="right-item fr clearfix">
+                <li class="service">
+                    <a href="javascript:;" class="service-btn">客戶服務<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">常見問題</a>
+                        <a href="">聯絡我們</a>
+                        <a href="">網站意見</a>
+                    </div>
+                </li>
+                <li><span class="line"></span></li>
+                <li class="reg-login">
+                    <a href="javascript:;" class="reg-login-btn">登入或註冊<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">登入</a>
+                        <a href="">建立賬戶</a>
+                        <a href="">我的預訂</a>
+                        <a href="">我的最愛埸地</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--banner-->
+    <div class="banner">
+        <img src="images/banner1.jpg" alt="">
+        <div class="wrap">
+             <div class="search-wrap">
+                <form action="" name="reg_testdate" class="search-content">
+                    <h4 class="item"><span class="line">
+                        </span><span class="text">婚宴場地預約</span><span class="line"></span>
+                    </h4>
+                    <div class="item address">
+                        <div class="item-tit"><span class="red bold">地區/埸地*</span><span class="fr" style="font-size:12px">*必需選擇</span></div>
+                        <div class="select-box-wrap">
+                           <div class="select-box">
+                                <span class="text">請選擇地區/埸地</span>
+                                <span class="icon"></span>
+                           </div>
+                           <!-- 地址下拉選擇內容 -->
+                           <div class="select-option" style="display:none;">
+                                <div class="option-content">
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="a" class="checkbox-label">
+                                                <input id="a" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">香港區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="a1" class="checkbox-label">
+                                                <input id="a1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>淺水灣</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="a2" class="checkbox-label" >
+                                                <input id="a2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>大舞臺</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="b" class="checkbox-label">
+                                                <input id="b" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">九龍區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="b1" class="checkbox-label">
+                                                <input id="b1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍東</span>
+                                            </label>
+                                            <label for="b2" class="checkbox-label">
+                                                <input id="b2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍半山</span>
+                                            </label>
+                                            <label for="b3" class="checkbox-label">
+                                                <input id="b3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>太子東提</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="b4" class="checkbox-label">
+                                                <input id="b4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>博藝會</span>
+                                            </label>
+                                             <label for="b5" class="checkbox-label">
+                                                <input id="b5" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>郵輪堤岸 </span>
+                                            </label>
+                                             <label for="b6" class="checkbox-label">
+                                                <input id="b6" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>海濱長廊</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="c" class="checkbox-label">
+                                                <input id="c" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">新界區 </span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="c1" class="checkbox-label">
+                                                <input id="c1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>愉花園 </span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c2" class="checkbox-label">
+                                                <input id="c2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>科學園</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c3" class="checkbox-label">
+                                                <input id="c3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>萬濤</span>
+                                            </label>
+                                            <label for="c4" class="checkbox-label">
+                                                <input id="c4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>銀灘</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                                                                      
+                             
+                                    <!-- 所有地区 -->
+                                     <div class="option-item all-option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="d" class="checkbox-label">
+                                                <input id="d" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">所有地區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- 确定按钮 -->
+                                    <div class="btn-wrap">
+                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="item date">
+                        <div class="item-tit"><span class="red bold">婚宴日期*</span></div>
+                        <div class="date-content">
+                            <select id='year' name="YYYY" onChange="YYYYDD(this.value)">
+                                <option value="">请选择 年</option>
+                            </select>
+                            <select id='month' name="MM" onChange="MMDD(this.value)">
+                                <option value="">选择 月</option>
+                            </select>
+                            <select id="day" name="DD">
+                                <option value="">选择 日</option>
+                            </select>
+                            <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:''});"></a>
+                        </div>
+                        <!-- <input type="text" id="c3">  -->
+                        
+                    </div>
+                    <div class="item info clearfix">
+                        <div class="left fl">
+                            <p class="red item-tit bold">時段*</p>
+                            <select name="" id="">
+                                <option value="">晚間</option>
+                            </select>
+                        </div>
+                        <div class="right fr">
+                            <p class="red item-tit bold">預計席數</p>
+                            <select name="" id="">
+                                <option value="">未定</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-btn-wrap">
+                        <a href="javascript:;" class="search-btn home-icon"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--list-one-->
+    <div class="list-one">
+        <div class="wrap">
+            <div class="item fl">
+                <img src="images/list_one_1.jpg" alt="">
+                <div class="item-content">
+                    <h6 class="t1">優惠婚宴搜尋</h6>
+                    <p class="t2">方便您找到心水場地的最佳大日子</p>
+                </div>
+                <div class="btn-wrap">
+                    <a href="" class="go-btn home-icon"></a>
+                </div>
+            </div>
+            <div class="item fl">
+                <img src="images/list_one_2.jpg" alt="">
+                <div class="item-content">
+                    <h6 class="t1">限時優惠</h6>
+                    <p class="t2">12月限量搶購!!!</p>
+                </div>
+                <div class="btn-wrap">
+                    <a href="" class="go-btn home-icon"></a>
+                </div>
+            </div>
+            <div class="item fl">
+                <img src="images/list_one_3.jpg" alt="">
+                <div class="item-content">
+                    <h6 class="t1">開放日</h6>
+                    <p class="t2">2016-12-17 愉花園開放日</p>
+                </div>
+                <div class="btn-wrap">
+                    <a href="" class="go-btn home-icon"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--list-two-->
+    <div class="list-two">
+        <div class="wrap">
+            <div class="item">
+                <img src="images/list_two_1.jpg" alt="">
+                <div class="item-content-wrap">
+                    <div class="item-content">
+                       <!--  <h6 class="t1">NEW!全新場地</h6>
+                       <p class="t2">只需最低消費10%即時網上預定婚宴</p> -->
+                       <img src="images/list_two_content_1.jpg" alt="">
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="" class="go-btn home-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--hot-->
+    <div class="hot">
+        <div class="wrap clearfix">
+            <div class="hot-left fl home-icon"></div>
+            <div class="hot-right fl">
+                <div class="item clearfix">
+                    <div class="img fl">
+                        <img src="images/hot_content_img_1.jpg" alt="">
+                    </div>
+                    <div class="text fl">
+                        <h6 class="tit">淺水灣</h6>
+                        <p class="con">ClubONE淺水灣座落於「天下第一灘-淺水灣」上，環抱無盡海洋，遍地璀璨金沙，你我海天盟誓，矢志不渝。</p>
+                        <div class="bottom">
+                            <span class="info">曾於1日10小時前被成功預訂</span>
+                            <a href="javascript:;" class="look-btn home-icon"></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="item clearfix">
+                    <div class="img fl">
+                        <img src="images/hot_content_img_2.jpg" alt="">
+                    </div>
+                    <div class="text fl">
+                        <h6 class="tit">科學園</h6>
+                        <p class="con">
+                            園區彷如城市綠洲，遠離繁囂。園內設有清雅景點及休憩設施，包括海洋廣場、議事廣場、園中湖等，讓新人及親友感受科學園的寧靜氣息，見證新人的幸福時刻。
+                        </p>
+                        <div class="bottom">
+                            <span class="info">曾於1日10小時前被成功預訂</span>
+                            <a href="javascript:;" class="look-btn home-icon"></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="item clearfix">
+                    <div class="img fl">
+                        <img src="images/hot_content_img_3.jpg" alt="">
+                    </div>
+                    <div class="text fl">
+                        <h6 class="tit">海濱長廊</h6>
+                        <p class="con">
+                            坐落千米觀塘海濱長廊旁，擁270度沿海景致，裝置藝術創作點綴文化與浪漫交纏。法式設計配上夜晚迷人海景，伴隨著浪漫的氣息。會所1?‧海濱長廊為你的婚宴設上一個浪漫法則。
+                        </p>
+                        <div class="bottom">
+                            <span class="info">曾於1日10小時前被成功預訂</span>
+                            <a href="javascript:;" class="look-btn home-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--为什么选择我们-->
+    <div class="reason-us">
+        <div class="wrap">
+            <div class="title home-icon"></div>
+            <div class="item-content">
+                <div class="item clearfix">
+                    <div class="left fl home-icon"></div>
+                    <div class="right fl">
+                        <h6 class="tit">最優惠價格</h6>
+                        <p class="info">只需付10%的最低消費•省時•保證最優惠</p>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="left fl home-icon"></div>
+                    <div class="right fl">
+                        <h6 class="tit">高透明度</h6>
+                        <p class="info">您可以隨時查閱各場地的預約狀況及價目，掌握最新</p>
+                    </div>
+                </div>
+                 <div class="item clearfix">
+                    <div class="left fl home-icon"></div>
+                    <div class="right fl">
+                        <h6 class="tit">簡單快捷</h6>
+                        <p class="info">
+                        透過clubonebooking.com，您可以隨時隨地預約心儀的婚宴場地，您所選擇的日期即時獲得保證。
+                        </p>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="left fl home-icon"></div>
+                    <div class="right fl">
+                        <h6 class="tit">安全可靠</h6>
+                        <p class="info">        您的信用卡資料會經SSL「安全通訊端層」傳送到銀行，有關資料不會儲存於我們的伺服器中，
+                        使用clubonebooking.com是絕對安全
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--登记-->
+    <div class="register-contact">
+        <div class="wrap">
+            <div class="left">
+                <div class="tips">
+                    <span class="t1">啟動每日優惠</span>
+                    <span class="t2">登記電郵即快人一步得到最新優惠!!</span>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="您的電子郵箱地址">
+                    <a href="javascript:;" class="reg-btn home-icon"></a>
+                </div>
+            </div>
+            <div class="right">
+                <a href="javascript:;" class="icon f-btn home-icon"></a>
+                <a href="javascript:;" class="icon c-btn home-icon"></a>
+                <a href="javascript:;" class="icon e-btn home-icon"></a>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="public-footer">
+        <div class="wrap">
+            <div class="top">
+                <a href="">手機版網頁</a>
+                <a href="">常見問題</a>
+                <a href="">使用條款</a>
+                <a href="">聯絡我們</a>
+            </div>
+            <div class="middle">
+                <a href="" class="bottom-logo">logo</a>
+                <span class="line"></span>
+                <a href="" class="spotlight">博藝會</a>
+                <span class="line"></span>
+                <a href="" class="grand-stage">西港城•大舞壹</a>
+                <span class="line"></span>
+                <a href="" class="kowloonPeak">九龍半山</a>
+                <span class="line"></span>
+                <a href="" class="kowloonEast">九龍東</a>
+                <span class="line"></span>
+                <a href="" class="wat-t">銀灘</a>
+                <span class="line"></span>
+                <a href="" class="har-t">郵輪堤岸</a>
+                <span class="line"></span>
+                <a href="" class="riverView">萬濤</a>
+                <span class="line"></span>
+                <a href="" class="ropulseBay">淺水灣</a>
+                <span class="line"></span>
+                <a href="" class="c-park">科學園</a>
+                <span class="line"></span>
+                <a href="" class="oneBayEast">海濱長廊</a>
+                <span class="line"></span>
+                <a href="" class="prince">太子東提</a>
+                <span class="line"></span>
+                <a href="" class="loom">愉花園</a>
+                <span class="line"></span>
+            </div>
+            <div class="bottom">
+                <p>Copyright &copy; 2016. ClubONE All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //日期选择
+        if(document.attachEvent)   
+            window.attachEvent("onload", YYYYMMDDstart);   
+        else   
+            window.addEventListener('load', YYYYMMDDstart, false);  
+       $(function(){
+           
+
+            //隱藏下拉選擇
+            $('html').on('click',function(e){
+                //地區選擇
+                if(!$(e.target).hasClass('select-box-wrap') && !$(e.target).parents('div').hasClass('select-box-wrap')){
+                    $('.select-option').hide();
+                }
+                
+            })
+            //下拉选择
+            $('.select-box').click(function(){
+                if($('.select-option').is(":hidden")){
+                    $('.select-option').show();
+                }else{
+                    $('.select-option').hide();
+                }
+            })
+
+            //下拉地址选择
+            $('.confirm-btn').click(function(){
+                var isChecked = $('.option-item > .left > .checkbox-label').children('input:checked');
+                var text="";
+                for(var i = 0; i < isChecked.length;i++){
+                    if($(isChecked[i]).is(':checked')){
+                        if(i != isChecked.length-1){
+                            text+=$(isChecked[i]).siblings('.text').text()+'/';
+                        }else{
+                            text+=$(isChecked[i]).siblings('.text').text();
+                        }
+                    }
+                
+                }
+                $('.select-box > .text').html(text);
+                $('.select-option').hide();
+               
+            })
+           $('.option-item > .right > .checkbox-label').click(function(){
+               var checkboxs = $(this).parents('.right').find('input[type="checkbox"]');
+               for(var i = 0;i < checkboxs.length;i++){
+                   if($(checkboxs[i]).is(":checked")){
+                       $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=true;
+                       return;
+                   }
+               }
+               $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=false;
+           })
+       })
+    </script>
+</body>
+</html>

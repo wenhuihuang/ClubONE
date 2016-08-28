@@ -1,0 +1,363 @@
+@charset "utf-8";
+.public-header{
+  background:#F4F4F4;
+}
+.public-header-menu{
+  background:#fff;
+}
+.bg-img{
+  background: url("../img/venue_bg.png")no-repeat;
+}
+/*测边工具条*/
+.side-bar{
+  position: fixed;
+  top:182px;
+  right:0;
+  z-index:10000;
+}
+.side-bar a{
+  display: block;
+  width:77px;
+  margin-bottom:12px;
+  background:url("../img/side_bar_icon.png") no-repeat;
+}
+.side-bar a.email{
+  height:74px;
+  background-position: 0 0;
+}
+.side-bar a.line{
+  height:74px;
+  background-position: 0 -86px;
+}
+.side-bar a.tel{
+  height:74px;
+  background-position: 0 -171px;
+}
+.side-bar a.favorable{
+  height:74px;
+  background-position: 0 -258px;
+}
+.side-bar a.compute{
+  height:112px;
+  background-position: 0 -345px;
+}
+/*测边工具条结束*/
+/*步驟*/
+.map-tips .item{
+  float:left;
+}
+.tab-title a{
+  padding:0px 24px;
+  float:left;
+  border-right:1px solid #FF5D73;
+  border-top:1px solid #FF5D73;
+  border-left:1px solid #FF5D73;
+  color:#fff;
+  background:#FF1131;
+  font-size:20px;
+  font-weight:bold;
+}
+.tab-title a.active{
+  background:#fff;
+  color:#FF1131;
+}
+.tab-title{
+  height:56px;
+  line-height: 56px;
+}
+.tab-content{
+  width:730px;
+  border:1px solid #FF5D73;
+}
+.tab-content .tab-item{
+  display: none;
+}
+.tab-content .active{
+  display: block;
+}
+.subscribe-btn{
+  display: inline-block;
+  width:172px;
+  height: 57px;
+  background:url(../img/yuding.png) no-repeat center center;
+}
+.main-right{
+  margin-left:8px;
+  width:278px;
+
+}
+.all-browse .tit{
+  background:#FF1131;
+  color:#fff;
+  height:48px;
+  line-height:48px;
+  padding:0 20px;
+  font-size:16px;
+  font-weight:bold;
+}
+.all-browse .con{
+  padding:10px;
+}
+.all-browse .img img{
+  width:100%;
+}
+.right-contact{
+  margin-bottom:10px;
+  border:1px solid #FF5D73;
+}
+.all-browse{
+  border:1px solid #FF5D73;
+}
+.main-right .right-contact .img{
+  width:97px;
+  height: 116px;
+  background:url(../img/head_img.png) no-repeat center center;
+}
+.right-contact .text{
+  width:158px;
+  padding:0 10px;
+  height: 116px;
+  color:#fff;
+  background:url("../img/text_bg.png") repeat-x center center;
+}
+.main-right .border-bottom{
+  border-bottom:1px solid #FF334F;
+}
+.main-right .item{
+  padding:10px 0;
+}
+.area-name{
+  font-size:18px;
+  font-weight:bold;
+  color:#090909;
+  padding:10px 0;
+}
+.personal{
+  padding:10px;
+}
+.tab-content input[type="text"],.tab-content input[type="password"]{
+  border-radius:3px;
+  padding:5px;
+  border:1px solid #958E8E;
+}
+.tab-content .tit-a{
+  font-size:18px;
+  font-weight:bold;
+}
+.tab-content .tit-b{
+  font-size:16px;
+  font-weight:bold;
+}.personal .inline-item{
+   margin-right:20px;
+ }
+.personal .row{
+  margin:10px 0;
+}
+.pay{
+  padding:10px;
+  background:#FFE6E6;
+}
+.pay .tit{
+  padding:10px 0;
+}
+.pay .label-wrap input[type="radio"],.pay .label input[type='checkbox'],.pay .label span{
+  display: inline-block;
+  vertical-align: middle;
+}
+.pay .row{
+  margin:10px 0;
+}
+.pay select {
+  border:1px solid #8D8D8D;
+  padding:5px;
+  width:80px;
+  border-radius:3px;
+}
+.cancel-clause .right,.cancel-clause .left {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.cancel-clause .left{
+  width:410px;
+}
+.cancel-clause .right{
+  width:296px;
+  text-align:right;
+}
+.cancel-clause{
+  padding:10px;
+}
+.cancel-clause .tit-1{
+  font-size:16px;
+  font-weight:bold;
+}
+.cancel-clause .label-text{
+  display: inline-block;
+  vertical-align: top;
+  width: 343px;
+}
+.blue{
+  color:#3158FF;
+}
+.map-tips{
+  background:#F7E0E3;
+  padding:15px 0;
+}
+.map-tips .item{
+  float:left;
+  height:44px;
+  line-height:44px;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+}
+.map-tips .left{
+  width:388px;
+  background:url(../img/reg_map_bg1.png) no-repeat center center;
+}
+.map-tips .middle{
+  width:341px;
+  background:url(../img/reg_map_bg2.png) no-repeat center center;
+}
+.map-tips .right{
+  width:291px;
+  color:#412125;
+  background:url(../img/reg_map_bg3.png) no-repeat center center;
+}
+.main-content{
+  background:#F5F4F4;
+}
+.main-content .wrap{
+  background:#fff;
+  padding:25px;
+}
+.bottom-tips{
+  padding:15px 0;
+}
+.bottom-tips .fl{
+  padding-top:10px;
+}
+.bottom-tips .img{
+  width:148px;
+  height:103px;
+  background:url(../img/bottom_tip_img.png) no-repeat center center;
+}
+.lock-icon{
+  display: inline-block;
+  width:23px;
+  height: 30px;
+  margin-right:8px;
+  background:url(../img/lock_icon.png) no-repeat center center;
+}
+.security-tips span{
+  display:inline-block;
+  vertical-align: bottom;
+}
+.classify-name{
+  font-size:24px;
+  font-weight:bold;
+  color:#FF1434;
+  padding:10px 0;
+}
+.tiao-kuan{
+  display: inline-block;
+  vertical-align: middle;
+  width:9px;
+  height:8px;
+  margin-right:4px;
+  background:url(../img/tiaokuan_icon.png) no-repeat center center;
+}
+.cvc-icon{
+  display: inline-block;
+  vertical-align: middle;
+  width:20px;
+  height:20px;
+  background:url(../img/card_tips.png) no-repeat center center;
+}
+.cvc{
+  position:relative;
+}
+.cvc-pop{
+  display: none;
+  position:absolute;
+  background:#fff;
+  border:1px solid #FE2C2C;
+  z-index: 100;
+  top: -294px;
+  left: 152px;
+  width:550px;
+}
+.cvc-con{
+  padding:15px;
+}
+.cvc-tips .img{
+  width:278px;
+  height: 186px;
+  margin:10px auto;
+  background:url(../img/cvc_tips.png) no-repeat center center;
+}
+.cvc-pop .cvc-title{
+  height:35px;
+  line-height: 35px;
+  background:#FF0000;
+  color:#fff;
+  padding:0 15px;
+  font-size:17px;
+  font-weight:bold;
+}
+.cvc-number{
+  width:100px;
+}
+.border-bg{
+  position:absolute;
+  bottom:16px;
+  left:-14px;
+  display: inline-block;
+  width: 26px;
+  height: 27px;
+  background: url(../img/cvc_tips_border.png)  no-repeat center center;
+}
+.cvc-wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width:50px;
+  height:27px;
+}
+.pay .tit{
+  font-size:18px;
+  font-weight:bold;
+}
+.pay-right{
+  width:260px;
+}
+.pay-right .way{
+  padding:10px 0;
+}
+.pay-right .way img{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:5px;
+  border:1px solid #ccc;
+}
+.pay-right .icon{
+  display: inline-block;
+  vertical-align: middle;
+  width:18px;
+  height: 14px;
+  margin-right:5px;
+  background:url(../img/hook_icon.png) no-repeat center center;
+}
+.pay-right p{
+  margin:4px 0;
+}
+.pay-right .tit{
+  font-size:16px;
+  font-weight:bold;
+}
+.w356{
+  width:356px;
+}
+.w240{
+  width:240px;
+}
+/*中间内容结束*/
