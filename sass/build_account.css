@@ -1,7 +1,24 @@
-div {
-  width: 10px;
-  height: 10px;
-  background: "red";
+@charset "UTF-8";
+/*登录*/
+.login-info-tips {
+  padding: 10px 15px;
+  background: #FDE4E4;
+}
+.login-info-tips .user-name {
+  color: #FF1131;
+}
+
+.default-link {
+  color: #0F5DFD;
+}
+
+.personage-info {
+  padding: 10px;
+}
+.personage-info .row .item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
 }
 
 /*# sourceMappingURL=build_account.css.map */
