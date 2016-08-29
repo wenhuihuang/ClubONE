@@ -1,4 +1,6 @@
 @charset "utf-8";
+$lte7: true;
+@import "sassCore/function";
 $pink:#FDE4E4;
 $red:#FF1131;
 $blue-link:#0F5DFD;
@@ -21,9 +23,22 @@ $px10:10px;
 .personage-info{
   padding:$px10;
   .row{
+    margin:8px 0;
     .item{
       @include inline-block;
       margin-right:40px;
     }
   }
+}
+.blue-link{
+  color:$blue-link;
+}
+.login-btn{
+  display: inline-block;
+  font-size:22px;
+  font-weight:bold;
+  color:#fff;
+  background:#FF1131;
+  padding:8px 30px;
+  @include prefixer(border-radius, 4px, webkit moz o);
 }

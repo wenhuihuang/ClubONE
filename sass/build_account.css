@@ -15,10 +15,29 @@
 .personage-info {
   padding: 10px;
 }
+.personage-info .row {
+  margin: 8px 0;
+}
 .personage-info .row .item {
   display: inline-block;
   vertical-align: middle;
   margin-right: 40px;
+}
+
+.blue-link {
+  color: #0F5DFD;
+}
+
+.login-btn {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background: #FF1131;
+  padding: 8px 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=build_account.css.map */

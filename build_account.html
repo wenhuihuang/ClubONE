@@ -213,7 +213,7 @@
                                     <input class="w356" type="text">
                                 </div>
                                 <div class="row">
-                                    <p><span class="tit-b">英文名字<span>只可以使用英文字母</span></span></p>
+                                    <p><span class="tit-b">英文名字</span><span>只可以使用英文字母</span></p>
                                     <input class="w356" type="text">
                                 </div>
                                 <div class="row">
@@ -298,34 +298,171 @@
                             </div>
                         </div>
                     </div>
+                    <!--登入-->
                     <div class="tab-item">
-                        <div class="login-info-tips">
-                            你目前以<span class="user-name">pennychan0011@gmail.com</span>身份登入。
-                            <a href="" class="default-link">登出</a>
-                        </div>
-                        <div class="personage-info">
-                            <h5 class="">您的個人資料</h5>
-                            <div class="row">
-                               <div class="item">
-                                   <label class="label">姓氏：</label>
-                                   <span>Chan</span>
-                               </div>
-                                <div class="item">
-                                    <label for="">名字：</label>
-                                    <span>Penny</span>
+                        <!--状态一-->
+                        <div class="login-one">
+                            <div class="login-info-tips">
+                                你目前以<span class="user-name">pennychan0011@gmail.com</span>身份登入。
+                                <a href="" class="default-link">登出</a>
+                            </div>
+                            <div class="personage-info">
+                                <h5 class="tit-a">您的個人資料</h5>
+                                <div class="row">
+                                    <div class="item">
+                                        <label class="label tit-c">姓氏：</label>
+                                        <span>Chan</span>
+                                    </div>
+                                    <div class="item">
+                                        <label for="" class="label tit-c">名字：</label>
+                                        <span>Penny</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="item">
+                                        <label for="" class="label tit-c">電話號碼：</label>
+                                        <span>60125678</span>
+                                    </div>
+                                    <div class="item">
+                                        <label for="" class="label tit-c">聯絡電話：</label>
+                                        <span>pennychan001@gmail.com</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="item">
-                                    <label for="">電話號碼：</label>
-                                    <span>60125678</span>
+                        </div>
+                        <!--状态二-->
+                        <div class="login-two">
+                            <div class="personage-info">
+                                <h5 class="tit-a">您的個人資料</h5>
+                                <div class="row">
+                                    <p class="tit-c">電郵地址</p>
+                                    <input style="width:320px;" type="text">
                                 </div>
-                                <div class="item">
-                                    <label for="">聯絡電話：</label>
-                                    <span>pennychan001@gmail.com</span>
+                                <div class="row">
+                                    <p class="tit-c">密碼</p>
+                                    <input type="text">
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="item fl">
+                                        <label class="checkbox-label" for="keep-login">
+                                            <input id="keep-login" type="checkbox" style="display: none;">
+                                            <span class="checkbox"></span>
+                                            <span class="label-text"><span class="tit-c">保持登入</span>（如正使用共用電腦請取消勾選）</span>
+                                        </label>
+                                    </div>
+                                    <div class="item fr" style="margin-right:0">
+                                        <p style="text-align:right;"><a href="" class="blue-link">忘記賬戶？</a></p>
+                                        <p style="text-align:right;margin:4px 0;"><a href="" class="blue-link">忘記密碼？</a></p>
+                                        <p><a href="javascript:;" class="login-btn">登入</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!--付款資料-->
+                        <div class="pay clearfix">
+                            <div class="tit">付款資料</div>
+                            <div class="pay-left fl">
+                                <div class="row tit-b">
+                                    <label class="label-wrap" for="visa">
+                                        <input type="radio" id="visa">
+                                        <span>Visa</span>
+                                    </label>
+                                    <label class="label-wrap" for="masterCard">
+                                        <input type="radio" id="masterCard">
+                                        <span>MasterCard</span>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <p><span class="tit-b">英文姓氏</span><span>只可以使用英文字母</span></p>
+                                    <input class="w356" type="text">
+                                </div>
+                                <div class="row">
+                                    <p><span class="tit-b">英文名字</span><span>只可以使用英文字母</span></p>
+                                    <input class="w356" type="text">
+                                </div>
+                                <div class="row">
+                                    <p class="tit-b">信用卡號碼</p>
+                                    <input type="text" class="w240">
+                                </div>
+                                <div class="row cvc">
+                                    <p class="tit-b">CVC代碼</p>
+                                    <input type="text" class="cvc-number">
+                                    <div class="cvc-wrap">
+                                        <span class="cvc-icon"></span>
+                                        <div class="cvc-pop">
+                                            <div class="cvc-title">
+                                                CVC代碼
+                                            </div>
+                                            <div class="cvc-con">
+                                                <p>
+                                                    安全密碼: 安全密碼是為了保障您的安全，我們為所有 Visa卡和Mastercard 均要求一個確認的號碼，始能用以進行交易轉帳。
+                                                </p>
+                                                <p>
+                                                    Visa / Mastercard，是一個三位數碼印在卡的後面，正好顯現在您的實際卡號的右方 (請看下方)。 若信用卡的確認號碼與此卡之類型不符，則請嘗試使用另一張信用卡。
+                                                </p>
+                                                <div class="cvc-tips">
+                                                    <div class="img"></div>
+                                                </div>
+                                            </div>
+                                            <span class="border-bg"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p class="tit-b">有效日期</p>
+                                    <select name="" id="month">
+                                        <option value="">月</option>
+                                    </select>
+                                    <select name="" id="year">
+                                        <option value="">年</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="pay-right fr">
+                                <h5 class="tit">我們接受以下付款方法</h5>
+                                <div class="way">
+                                    <img src="img/card-1.png" alt="">
+                                    <img src="img/card-2.png" alt="">
+                                </div>
+                                <h5 class="tit">你可信賴我們</h5>
+                                <p><span class="icon"></span>我們使用安全傳輸方式</p>
+                                <p><span class="icon"></span>我們會保護你的個人資料</p>
+                            </div>
+                        </div>
+                        <!--取消政策與預訂條款-->
+                        <div class="cancel-clause">
+                            <div class="left">
+                                <h5 class="tit-1">取消政策與預訂條款</h5>
+                                <p>不設退款</p>
+                                <p>如你更改或取消些預訂，將不會退回任何款項</p>
+                                <div class="clause-item checkbox-label">
+                                    <label for="clause-for">
+                                        <input id="clause-for" type="checkbox" style="display: none;">
+                                        <span class="checkbox"></span>
+                                        <span class="label-text">
+                                            我明白繼續預訂即表示，您同意你已閱讀并接受我們的
+                                             <a href="" class="blue"><span class="tiao-kuan"></span>條款及細則</a>
+                                            <span>與</span>
+                                            <a href="" class="blue"><span class="tiao-kuan"></span>私隠政策</a>
+                                        </span>
+                                    </label>
+
+                                </div>
+                                <div class="clause-item">
+                                    <label for="popularize-for">
+                                        <input id="popularize-for" type="checkbox" style="display: none;">
+                                        <span class="checkbox"></span>
+                                        <span class="label-text">如需收取我們載有ClubONE推廣資料的特別優惠電郵通訊，請勾選此方格。</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <!--預訂-->
+                                <a href="javascript:;" class="subscribe-btn"></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!--底部提示-->
