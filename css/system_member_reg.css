@@ -1,0 +1,126 @@
+@charset "utf-8";
+.home-icon{
+    background: url(../img/home_icons.png) no-repeat;
+}
+.banner img{
+    width:100%;
+    display: block;
+    margin:0 auto;
+    /* position: absolute; */
+}
+.banner{
+    /* position:relative; */
+}
+/*登記框*/
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+.content-wrap{
+    /*position: absolute;*/
+    padding-top:250px;
+    left:0px;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    width:860px;
+    z-index: 110;
+    padding-bottom:50px;
+}
+.content-title{
+    height:75px;
+    position: relative;
+    background:#A20017;
+    color:#fff;
+    padding-top:40px;
+}
+.content-title .tips{
+    padding:10px 40px;
+}
+.content-title .tit{
+    position: absolute;
+    height:80px;
+    line-height:80px;
+    text-align:center;
+    font-size:28px;
+    width: 440px;
+    background:#FF1131;
+    top:-40px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+.content-con{
+    background:#fff;
+    padding:40px;
+}
+.reg-form input[type="text"],.reg-form input[type='password'],select{
+    border:1px solid #F58A97;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    padding:5px;
+    margin:5px 0;
+}
+.reg-form input[type="text"]:focus,.reg-form input[type='password']:focus,select:focus{
+    outline: none;
+    box-shadow: 0px 0px 4px 1px #f77685;
+}
+.reg-form .row{
+    margin:8px 0;
+}
+.reg-form .inline-block{
+    margin-right:10px;
+}
+.date .con select,.date .con .calendar-btn{
+    display: inline-block;
+    vertical-align: middle;
+}
+.date .con select{
+    margin-right:10px;
+}
+.reg-form label{
+    margin-right:20px;
+}
+.reg-form .tit-1{
+    font-weight:bold;
+}
+.ren-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width:9px;
+    height:8px;
+    margin-right:6px;
+    margin-left:6px;
+    background: url(../img/ren_icon.gif) no-repeat center center;
+}
+.reg-btn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 197px;
+    height: 51px;
+    background:url(../img/reg-btn.gif) no-repeat center center;
+}
+.bottom-con .fl{
+    width:450px;
+}
+.add-btn{
+    position:absolute;
+    left:0;
+    bottom:0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background:url(../img/add_date_icon.gif) no-repeat center center;
+}
+.date-wrap{
+    position: relative;
+    padding-bottom:30px;
+}
+
+
+

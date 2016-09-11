@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.public-header{
+  background:#F4F4F4;
+}
+.public-header-menu{
+  background:#fff;
+}
+/*测边工具条*/
+
+.side-bar {
+  position: fixed;
+  top: 182px;
+  right: 0;
+  z-index: 10000;
+  a {
+    display: block;
+    width: 77px;
+    margin-bottom: 12px;
+    background: url("../img/side_bar_icon.png") no-repeat;
+    &.email {
+      height: 74px;
+      background-position: 0 0;
+    }
+    &.line {
+      height: 74px;
+      background-position: 0 -86px;
+    }
+    &.tel {
+      height: 74px;
+      background-position: 0 -171px;
+    }
+    &.favorable {
+      height: 74px;
+      background-position: 0 -258px;
+    }
+    &.compute {
+      height: 112px;
+      background-position: 0 -345px;
+    }
+  }
+}
+
+/*测边工具条结束*/
+.main-content{
+  .wrap{
+    .content-left{
+      width:677px;
+    }
+    .content-right{
+      width:280px;
+    }
+  }
+}

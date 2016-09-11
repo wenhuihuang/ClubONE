@@ -1,0 +1,226 @@
+@charset "UTF-8";
+.public-header {
+  background: #F4F4F4; }
+
+.public-header-menu {
+  background: #fff; }
+
+/*测边工具条*/
+.side-bar {
+  position: fixed;
+  top: 182px;
+  right: 0;
+  z-index: 10000; }
+  .side-bar a {
+    display: block;
+    width: 77px;
+    margin-bottom: 12px;
+    background: url("../img/side_bar_icon.png") no-repeat; }
+    .side-bar a.email {
+      height: 74px;
+      background-position: 0 0; }
+    .side-bar a.line {
+      height: 74px;
+      background-position: 0 -86px; }
+    .side-bar a.tel {
+      height: 74px;
+      background-position: 0 -171px; }
+    .side-bar a.favorable {
+      height: 74px;
+      background-position: 0 -258px; }
+    .side-bar a.compute {
+      height: 112px;
+      background-position: 0 -345px; }
+
+/*测边工具条结束*/
+.main-content{
+  background:#F4F4F4;
+}
+.main-content .wrap{
+  background:#fff;
+  padding:0 25px;
+}
+.main-content .wrap .content-left {
+  width: 700px; }
+.main-content .wrap .content-right {
+  width: 300px; 
+  margin-left:8px;}
+.title-head{
+  height:45px;
+  line-height: 45px;
+  background: #E60020;
+  color:#fff;
+  font-size: 20px;
+  padding:0 20px;
+}
+.red-text{
+  color:red;
+}
+.font-18{
+  font-size: 18px;
+}
+.font-blue{
+  color:blue;
+}
+.contact-us,.item-content{
+  border:1px solid #E60020;
+}
+.item-content{
+  margin:20px 0;
+}
+.item-content-con{
+  padding:25px;
+  font-size: 15px;
+}
+.send-email{
+  margin-top:20px;
+}
+.send-email a{
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.tab-item{
+  margin:8px 0;
+}
+.tab-title{
+  background:#E4E4E4;
+  color:#222;
+  height:36px;
+  line-height: 36px;
+  padding:0 10px;
+}
+.tab-con{
+  padding:10px;
+  display: none;
+}
+.site-item{
+  font-size: 15px;
+  margin-bottom:20px;
+}
+.site-title span{
+  font-size: 18px;
+  font-weight: bold;
+  color:red;
+  display: inline-block;
+  vertical-align: middle;
+}
+.site-title .icon{
+  display: inline-block;
+  vertical-align: middle;
+  width:19px;
+  height:29px;
+  margin-left:8px;
+  background:url(../img/map_icon.png)no-repeat center center;
+
+}
+.site-address{
+  margin:5px 0;
+}
+/*register-contact*/
+.home-icon{
+  background: url(../img/home_icons.png) no-repeat;
+}
+.register-contact{
+  height: 120px;
+  background: #A10016;
+  position: relative;
+}
+.register-contact .wrap{
+  position: absolute;
+  left: 0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  height: 82px;
+}
+.register-contact .right{
+  display: inline-block;
+  vertical-align: bottom;
+  width:26%;
+}
+.register-contact .left{
+  display: inline-block;
+  vertical-align: bottom;
+  width:70%;
+}
+.register-contact .left{
+  text-align: left;
+}
+.register-contact .left .t1{
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+.register-contact .left .t2{
+  font-size: 18px;
+  color:#fff;
+}
+.register-contact .left .tips{
+  margin-bottom:10px;
+}
+.register-contact .left .input input,.register-contact .left .input a{
+  display: inline-block;
+  vertical-align: middle;
+}
+.register-contact .left input{
+  padding:12px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width:470px;
+}
+.register-contact .right{
+  text-align: right;
+}
+.register-contact .reg-btn{
+  display: inline-block;
+  width:90px;
+  height:40px;
+  margin-left:8px;
+  /* background: url(../img/reg_btn.png) no-repeat center center; */
+  background-position:0 -814px;
+}
+.register-contact .right .icon{
+  width:42px;
+  height: 42px;
+  margin-left: 10px;
+}
+.register-contact .right .f-btn{
+  /* background: url(../img/f_icon.png) no-repeat center center; */
+  background-position:0 -83px;
+}
+.register-contact .right .c-btn{
+  /* background: url(../img/c_icon.png) no-repeat center center; */
+  background-position:0 -41px;
+}
+.register-contact .right .e-btn{
+  /* background: url(../img/e_icon.png) no-repeat center center; */
+  background-position:0 -125px;
+}
+.arrows-up{
+  display: inline-block;
+  vertical-align: middle;
+  width:15px;
+  height:14px;
+  margin-top:10px;
+  background: url(../img/contact_us_arrows_up.png) no-repeat center center;
+}
+.arrows-down{
+  display: inline-block;
+  vertical-align: middle;
+  width:15px;
+  height:14px;
+  margin-top:10px;
+  background: url(../img/contact_us_arrows_down.png) no-repeat center center;
+}
+.email-icon{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 39px;
+  height: 26px;
+  margin-right:8px;
+  background: url(../img/email_blue_icon.png) no-repeat center center;
+}
+/*# sourceMappingURL=contact_us.css.map */

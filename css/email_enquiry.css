@@ -1,0 +1,165 @@
+@charset "UTF-8";
+.public-header {
+  background: #F4F4F4; }
+
+.public-header-menu {
+  background: #fff; }
+
+/*测边工具条*/
+.side-bar {
+  position: fixed;
+  top: 182px;
+  right: 0;
+  z-index: 10000; }
+  .side-bar a {
+    display: block;
+    width: 77px;
+    margin-bottom: 12px;
+    background: url("../img/side_bar_icon.png") no-repeat; }
+    .side-bar a.email {
+      height: 74px;
+      background-position: 0 0; }
+    .side-bar a.line {
+      height: 74px;
+      background-position: 0 -86px; }
+    .side-bar a.tel {
+      height: 74px;
+      background-position: 0 -171px; }
+    .side-bar a.favorable {
+      height: 74px;
+      background-position: 0 -258px; }
+    .side-bar a.compute {
+      height: 112px;
+      background-position: 0 -345px; }
+
+/*测边工具条结束*/
+.w150{
+  width:150px;
+}
+.w260{
+  width:260px;
+}
+.red-text{
+  color:red;
+}
+.font-blue{
+  color:blue;
+}
+.main-content{
+  /*position:relative;*/
+}
+.main-content .wrap{
+  padding-top:40px;
+  padding-bottom:40px;
+  padding-left:40px;
+}
+.email-title{
+  background:rgba(230, 0, 32, 0.75);
+  height:50px;
+  line-height: 50px;
+  color:#fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding:0 20px;
+}
+.email-content{
+  padding:10px 20px;
+}
+.email-form{
+  font-size:15px;
+  width:680px;
+  background:rgba(255, 255, 255, 0.76);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border:2px solid #E60020;
+  /*position: absolute;*/
+  /* opacity: 0.79;
+  filter:alpha(opacity=79); */
+
+}
+.email-form input[type='text']{
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border:1px solid #5D5D5D;
+  padding:4px;
+  background: #fff;
+}
+.item-one .item{
+  margin:10px 0;
+}
+.item-two .item{
+  display: inline-block;
+  vertical-align: middle;
+  margin:8px 0;
+  margin-right:15px;
+
+}
+.item-two-content .tit{
+  margin-bottom:8px;
+}
+.red-select{
+  border:1px solid #5D5D5D;
+  height:27px;
+  line-height: 27px;
+}
+.item-two .address{
+  width:200px;
+}
+.select-box{
+  height:27px;
+  border:1px solid #5D5D5D;
+}
+.item-two select{
+  height:27px;
+  border:1px solid #5D5D5D;
+}
+.select-box .text{
+  height:27px;
+
+}
+.item-two .date select{
+  display: inline-block;
+  vertical-align: middle;
+   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.item-two .date .calendar-btn{
+  vertical-align: middle;
+}
+.item-three textarea{
+  resize:none;
+  width:100%;
+  background:#fff;
+  border:1px solid #5D5D5D;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding:5px;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+}
+.item-two{
+  padding:20px 20px;
+  margin:0 -20px;
+  background:rgba(239, 197, 220, 0.98);
+}
+.item-three{
+  padding:20px 0;
+}
+.item-four{
+  text-align: right;
+}
+.submit-btn{
+  display: inline-block;
+  vertical-align: bottom;
+  width:183px;
+  height: 50px;
+  margin-left:8px;
+  background:url(../img/email_sub_btn.jpg) no-repeat center center;
+}

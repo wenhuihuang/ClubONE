@@ -30,6 +30,9 @@ function YYYYMMDDstart(y,mStr,d){
 	var n = MonHead[m];   
 	if ((m-1) ==1 && IsPinYear(YYYYvalue)) n++;   
 		writeDay(y,m,n); //赋日期下拉框
+		if(d < 10){
+			d='0'+d;
+		}
 	document.reg_testdate.DD.value = d;   
 }   
  

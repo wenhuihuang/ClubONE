@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/email_enquiry.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <!--<script src="js/common.js"></script>-->
+    <script>
+        /*日期下拉选择*/
+        function YYYYMMDDstart(y,mStr,d){   
+            var m;
+            var ys = $('.YYYY');
+            var ms = $('.MM');
+            var ds = $('.DD');
+            MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
+            if(y == undefined || m == undefined || d == undefined){
+                //先给年下拉框赋内容   
+                var y  = new Date().getFullYear();  
+                for (var i = (y-30); i < (y+30); i++) //以今年为准，前30年，后30年  
+                {
+                    for(var j = 0; j < ys.length;j++){
+                        ys[j].add(new Option(" "+ i +" 年", i));   
+                    }
+                } 
+                       
+                
+                //赋月份的下拉框   
+                for (var i = 1; i < 13; i++) {
+                    for(var j = 0; j < ms.length;j++){
+                        if(i < 10){
+                        
+                            ms[j].add(new Option(" " + "0"+i + " 月", "0"+i));    
+                        
+                        }else{
+
+                            ms[j].add(new Option(" " + i + " 月", i));   
+                        }
+                    }
+                    
+                }
+                m = new Date().getMonth() + 1;
+                var mStr;
+                if(m < 10 ){
+                    mStr = "0"+m;
+                }else
+                    mStr = m;
+                var d = new Date().getDate()
+            }
+            m = parseInt(mStr);
+            for(var i = 0; i < ys.length;i++){
+                ys[i].value = y;  
+            }
+            for(var i = 0; i < ms.length;i++){
+                 ms[i].value = mStr;  
+            }
+           
+            if(d <10){
+                d='0'+d;
+            }
+            var n = MonHead[m];   
+            if ((m-1) ==1 && IsPinYear(YYYYvalue)) n++;   
+                writeDay(y,m,n); //赋日期下拉框
+            for(var i = 0; i < ds.length;i++){
+                ds[i].value = d;   
+            }
+            
+        }   
+         
+        function YYYYDD(str,self) //年发生变化时日期发生变化(主要是判断闰平年)   
+        {   
+            var MMvalue = $(self).siblings('.MM').val();   
+            if (MMvalue == ""){ var e = $(self).siblings('.DD'); optionsClear(e); return;}   
+            var n = MonHead[MMvalue - 1];   
+            if (MMvalue ==2 && IsPinYear(str)) n++;   
+            writeDay(str,MMvalue,n,self)   
+        }   
+        function MMDD(str,self)   //月发生变化时日期联动   
+        {   
+            var YYYYvalue = $(self).siblings('.YYYY').val();   
+            if (YYYYvalue == ""){ var e = $(self).siblings('.DD'); optionsClear(e); return;}   
+            var n = MonHead[str - 1];   
+            if (str ==2 && IsPinYear(YYYYvalue)) n++;   
+            writeDay(YYYYvalue,str,n,self)   
+        }   
+        function writeDay(y,m,n,self)   //据条件写日期的下拉框   
+        {   
+            var dayStr = ['日','一','二','三','四','五','六'];
+              
+            if(self != undefined && self != null){
+                var e = $(self).siblings('.DD'); optionsClear(e); 
+            }else{
+                var e = $('.DD'); optionsClear(e); 
+            }
+            for(var i = 0; i < e.length;i++){
+                e[i].add(new Option('未定','未定'));
+            }
+            
+            for (var i=1; i<(n+1); i++) {
+                var day = new Date(y+'/'+m+'/'+i).getDay();
+                for(var j = 0; j < e.length;j++){
+                    if(i < 10 ){
+                        e[j].add(new Option(" "+ "0" + i + " 日("+dayStr[day]+")", "0"+i));     
+                    }else
+                        e[j].add(new Option(" "+ i + " 日("+dayStr[day]+")", i));   
+                }
+            }  
+            
+        }   
+        function IsPinYear(year)//判断是否闰平年   
+        {
+            return(0 == year%4 && (year%100 !=0 || year%400 == 0));
+        }   
+        function optionsClear(e)   
+        {   
+            for(var i = 0; i < e.length;i++){
+                e[i].options.length=1;
+            }
+        }  
+
+        /*日期下拉选择结束*/
+    </script>
+    <!-- 弹出日期选择 -->
+    <script type="text/javascript" src="js/lhgcore.js"></script>
+    <script type="text/javascript" src="js/lhgcalendar.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <div class="public-header">
+        <div class="wrap clearfix">
+            <div class="logo fl">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="會所一號">
+                </a>
+            </div>
+            <div class="contact fr">
+                <h4 class="contact-label">網上客戶服務熱線</h4>
+                <p class="contact-tel">致電：82099633</p>
+                <p class="contact-explain">（星期一至星期日9:30am至7:00pm）</p>
+            </div>
+        </div>
+    </div>
+    <!--头部菜单-->
+    <div class="public-header-menu">
+        <div class="wrap clearfix">
+            <ul class="left-item fl clearfix">
+                <li class="active">
+                    <span>首頁</span>
+                </li>
+                <li><span>優惠婚宴搜尋</span></li>
+                <li>
+                    <span>婚宴埸地<i class="icon"></i></span>
+                    <div class="sub-menu" style="">
+                        <div class="item">
+                            <span>九龍東</span>
+                        </div>
+                        <div class="item">
+                            <span>九龍半山<i class="icon"></i></span>
+                            <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>銀灘</span>
+                        </div>
+                        <div class="item">
+                            <span>郵輪堤岸</span>
+                        </div>
+                        <div class="item">
+                            <span>德藝會</span>
+                        </div>
+                        <div class="item">
+                            <span>博藝會<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>大舞臺</span>
+                        </div>
+                        <div class="item">
+                            <span>萬濤</span>
+                        </div>
+                        <div class="item">
+                            <span>淺水灣<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>科學園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>海濱長廊</span>
+                        </div>
+                        <div class="item">
+                            <span>太子東堤</span>
+                        </div>
+                        <div class="item">
+                            <span>愉花園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span>限時優惠</span><i class="new-tips"></i></li>
+                <li><span>會員優惠</span></li>
+            </ul>
+            <ul class="right-item fr clearfix">
+                <li class="service">
+                    <a href="javascript:;" class="service-btn">客戶服務<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">常見問題</a>
+                        <a href="">聯絡我們</a>
+                        <a href="">網站意見</a>
+                    </div>
+                </li>
+                <li><span class="line"></span></li>
+                <li class="reg-login">
+                    <a href="javascript:;" class="reg-login-btn">登入或註冊<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">登入</a>
+                        <a href="">建立賬戶</a>
+                        <a href="">我的預訂</a>
+                        <a href="">我的最愛埸地</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-bg"></div>
+    <!-- 主体 -->
+    <div class="main-content">
+        <div class="wrap"  style="background:url(images/email_enquiry_bg.jpg) no-repeat center center;background-size:100%;">
+            <form class="email-form" name="reg_testdate">
+                <div class="email-title">
+                    電郵查詢
+                </div>
+                <div class="email-content">
+                    <div class="item-one">
+                        <p class="red-text">請填寫以下資料我們將會有專人與您聯絡</p>
+                        <div class="item">
+                            <p>姓名*</p>
+                            <p>
+                                <input type="text" class="w150">
+                            </p>
+                        </div>
+                        <div class="item">
+                            <p>電郵地址*</p>
+                            <p>
+                                <input type="text" class="w260">
+                            </p>
+                        </div>
+                        <div class="item">
+                            <p>電話號碼*</p>
+                            <p>
+                                <input type="text" class="w150">
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <!-- 第二部分 -->
+                    <div class="item-two">
+                        <!-- item -->
+                         <div class="item-two-content">
+                             <div class="item address">
+                                <p class="tit">地區/埸地*</p>
+                                <div class="con">
+                                     <div class="select-box-wrap">
+                                           <div class="select-box">
+                                                <span class="text">請選擇地區/埸地</span>
+                                                <span class="icon"></span>
+                                           </div>
+                                           <!-- 地址下拉選擇內容 -->
+                                           <div class="select-option" style="display:none;">
+                                                <div class="option-content">
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="aa" class="checkbox-label">
+                                                                <input id="aa" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">香港區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="aa1" class="checkbox-label">
+                                                                <input id="aa1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>淺水灣</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="aa2" class="checkbox-label" >
+                                                                <input id="aa2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>大舞臺</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="ab" class="checkbox-label">
+                                                                <input id="ab" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">九龍區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="ab1" class="checkbox-label">
+                                                                <input id="ab1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍東</span>
+                                                            </label>
+                                                            <label for="ab2" class="checkbox-label">
+                                                                <input id="ab2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍半山</span>
+                                                            </label>
+                                                            <label for="ab3" class="checkbox-label">
+                                                                <input id="ab3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>太子東提</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="ab4" class="checkbox-label">
+                                                                <input id="ab4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>博藝會</span>
+                                                            </label>
+                                                             <label for="ab5" class="checkbox-label">
+                                                                <input id="ab5" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>郵輪堤岸 </span>
+                                                            </label>
+                                                             <label for="ab6" class="checkbox-label">
+                                                                <input id="ab6" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>海濱長廊</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="ac" class="checkbox-label">
+                                                                <input id="ac" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">新界區 </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="ac1" class="checkbox-label">
+                                                                <input id="ac1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>愉花園 </span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="ac2" class="checkbox-label">
+                                                                <input id="ac2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>科學園</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="ac3" class="checkbox-label">
+                                                                <input id="ac3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>萬濤</span>
+                                                            </label>
+                                                            <label for="ac4" class="checkbox-label">
+                                                                <input id="ac4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>銀灘</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                                                                      
+                                             
+                                                    <!-- 所有地区 -->
+                                                     <div class="option-item all-option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="ad" class="checkbox-label">
+                                                                <input id="ad" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">所有地區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <!-- 确定按钮 -->
+                                                    <div class="btn-wrap">
+                                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item date">
+                                <p class="tit">婚宴日期*</p>
+                                <div class="con">
+                                    <select class="YYYY year" name="YYYY" onChange="YYYYDD(this.value,this)">
+                                        <option value="">请选择 年</option>
+                                    </select>
+                                    <select class="MM month" name="MM" onChange="MMDD(this.value,this)">
+                                        <option value="">选择 月</option>
+                                    </select>
+                                    <select class="DD day" name="DD">
+                                        <option value="">选择 日</option>
+                                    </select>
+                                    <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:'',self:this});"></a>
+                                </div>
+                            </div>
+                            <div class="item"> 
+                                <p class="tit">时段*</p>
+                                <div class="con">
+                                    <select class="red-select" name="" id="">
+                                        <option value="">晚間</option>
+                                    </select>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="item-two-content">
+                             <div class="item address">
+                                <div class="con">
+                                     <div class="select-box-wrap">
+                                           <div class="select-box">
+                                                <span class="text">請選擇地區/埸地</span>
+                                                <span class="icon"></span>
+                                           </div>
+                                           <!-- 地址下拉選擇內容 -->
+                                           <div class="select-option" style="display:none;">
+                                                <div class="option-content">
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="ba" class="checkbox-label">
+                                                                <input id="ba" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">香港區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="ba1" class="checkbox-label">
+                                                                <input id="ba1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>淺水灣</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="ba2" class="checkbox-label" >
+                                                                <input id="ba2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>大舞臺</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="bb" class="checkbox-label">
+                                                                <input id="bb" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">九龍區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="bb1" class="checkbox-label">
+                                                                <input id="bb1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍東</span>
+                                                            </label>
+                                                            <label for="bb2" class="checkbox-label">
+                                                                <input id="bb2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍半山</span>
+                                                            </label>
+                                                            <label for="bb3" class="checkbox-label">
+                                                                <input id="bb3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>太子東提</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="bb4" class="checkbox-label">
+                                                                <input id="bb4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>博藝會</span>
+                                                            </label>
+                                                             <label for="bb5" class="checkbox-label">
+                                                                <input id="bb5" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>郵輪堤岸 </span>
+                                                            </label>
+                                                             <label for="bb6" class="checkbox-label">
+                                                                <input id="bb6" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>海濱長廊</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="bc" class="checkbox-label">
+                                                                <input id="bc" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">新界區 </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="bc1" class="checkbox-label">
+                                                                <input id="bc1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>愉花園 </span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="bc2" class="checkbox-label">
+                                                                <input id="bc2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>科學園</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="bc3" class="checkbox-label">
+                                                                <input id="bc3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>萬濤</span>
+                                                            </label>
+                                                            <label for="bc4" class="checkbox-label">
+                                                                <input id="bc4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>銀灘</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                                                                      
+                                             
+                                                    <!-- 所有地区 -->
+                                                     <div class="option-item all-option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="bd" class="checkbox-label">
+                                                                <input id="bd" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">所有地區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <!-- 确定按钮 -->
+                                                    <div class="btn-wrap">
+                                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item date">
+                                <div class="con">
+                                    <select class="YYYY year" name="YYYY" onChange="YYYYDD(this.value,this)">
+                                        <option value="">请选择 年</option>
+                                    </select>
+                                    <select class="MM month"  name="MM" onChange="MMDD(this.value,this)">
+                                        <option value="">选择 月</option>
+                                    </select>
+                                    <select class="DD day" name="DD">
+                                        <option value="">选择 日</option>
+                                    </select>
+                                    <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:'',self:this});"></a>
+                                </div>
+                            </div>
+                            <div class="item"> 
+                                <div class="con">
+                                    <select class="red-select" name="" id="">
+                                        <option value="">晚間</option>
+                                    </select>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="item-two-content">
+                             <div class="item address">
+                                <div class="con">
+                                     <div class="select-box-wrap">
+                                           <div class="select-box">
+                                                <span class="text">請選擇地區/埸地</span>
+                                                <span class="icon"></span>
+                                           </div>
+                                           <!-- 地址下拉選擇內容 -->
+                                           <div class="select-option" style="display:none;">
+                                                <div class="option-content">
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="ca" class="checkbox-label">
+                                                                <input id="ca" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">香港區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="ca1" class="checkbox-label">
+                                                                <input id="ca1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>淺水灣</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="ca2" class="checkbox-label" >
+                                                                <input id="ca2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>大舞臺</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="cb" class="checkbox-label">
+                                                                <input id="cb" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">九龍區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="cb1" class="checkbox-label">
+                                                                <input id="cb1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍東</span>
+                                                            </label>
+                                                            <label for="cb2" class="checkbox-label">
+                                                                <input id="cb2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>九龍半山</span>
+                                                            </label>
+                                                            <label for="cb3" class="checkbox-label">
+                                                                <input id="cb3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>太子東提</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="cb4" class="checkbox-label">
+                                                                <input id="cb4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>博藝會</span>
+                                                            </label>
+                                                             <label for="cb5" class="checkbox-label">
+                                                                <input id="cb5" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>郵輪堤岸 </span>
+                                                            </label>
+                                                             <label for="cb6" class="checkbox-label">
+                                                                <input id="cb6" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>海濱長廊</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="cc" class="checkbox-label">
+                                                                <input id="cc" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">新界區 </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            <label for="cc1" class="checkbox-label">
+                                                                <input id="cc1" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>愉花園 </span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="cc2" class="checkbox-label">
+                                                                <input id="cc2" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>科學園</span>
+                                                                <span class="new-tips home-icon"></span>
+                                                            </label>
+                                                            <label for="cc3" class="checkbox-label">
+                                                                <input id="cc3" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>萬濤</span>
+                                                            </label>
+                                                            <label for="cc4" class="checkbox-label">
+                                                                <input id="cc4" type="checkbox" name="">
+                                                                <span class="checkbox"></span>
+                                                                <span>銀灘</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                                                                      
+                                             
+                                                    <!-- 所有地区 -->
+                                                     <div class="option-item all-option-item clearfix">
+                                                        <div class="left fl">
+                                                            <label for="cd" class="checkbox-label">
+                                                                <input id="cd" type="checkbox">
+                                                                <span class="checkbox"></span>
+                                                                <span class="text">所有地區</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="right fl">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <!-- 确定按钮 -->
+                                                    <div class="btn-wrap">
+                                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item date">
+                                <div class="con">
+                                    <select class="YYYY year" name="YYYY" onChange="YYYYDD(this.value,this)">
+                                        <option value="">请选择 年</option>
+                                    </select>
+                                    <select class="MM month"  name="MM" onChange="MMDD(this.value,this)">
+                                        <option value="">选择 月</option>
+                                    </select>
+                                    <select class="DD day" name="DD">
+                                        <option value="">选择 日</option>
+                                    </select>
+                                    <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:'',self:this});"></a>
+                                </div>
+                            </div>
+                            <div class="item"> 
+                                <div class="con">
+                                    <select class="red-select" name="" id="">
+                                        <option value="">晚間</option>
+                                    </select>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                    <!-- 第三部分 -->
+                    <div class="item-three">
+                        <p>您的意見/查詢*</p>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <div>
+                            <label for="popularize-for">
+                                <input id="popularize-for" type="checkbox" style="display: none;">
+                                <span class="checkbox"></span>
+                                <span class="label-text">如需收取我們載有ClubONE推廣資料的特別優惠電郵通訊，請勾選此方格。</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="read-for">
+                                <input id="read-for" type="checkbox" style="display: none;">
+                                <span class="checkbox"></span>
+                                <span class="label-text">我已閱讀<a href="" class="font-blue">私隱政策</a></span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- 第四部分 -->
+                    <div class="item-four">
+                        <span>*為必須填寫</span>
+                        <a href="javascript:;" class="submit-btn"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="public-footer">
+        <div class="wrap">
+            <div class="top">
+                <a href="">手機版網頁</a>
+                <a href="">常見問題</a>
+                <a href="">使用條款</a>
+                <a href="">聯絡我們</a>
+            </div>
+            <div class="middle">
+                <a href="" class="bottom-logo">logo</a>
+                <span class="line"></span>
+                <a href="" class="spotlight">博藝會</a>
+                <span class="line"></span>
+                <a href="" class="grand-stage">西港城•大舞壹</a>
+                <span class="line"></span>
+                <a href="" class="kowloonPeak">九龍半山</a>
+                <span class="line"></span>
+                <a href="" class="kowloonEast">九龍東</a>
+                <span class="line"></span>
+                <a href="" class="wat-t">銀灘</a>
+                <span class="line"></span>
+                <a href="" class="har-t">郵輪堤岸</a>
+                <span class="line"></span>
+                <a href="" class="riverView">萬濤</a>
+                <span class="line"></span>
+                <a href="" class="ropulseBay">淺水灣</a>
+                <span class="line"></span>
+                <a href="" class="c-park">科學園</a>
+                <span class="line"></span>
+                <a href="" class="oneBayEast">海濱長廊</a>
+                <span class="line"></span>
+                <a href="" class="prince">太子東提</a>
+                <span class="line"></span>
+                <a href="" class="loom">愉花園</a>
+                <span class="line"></span>
+            </div>
+            <div class="bottom">
+                <p>Copyright &copy; 2016. ClubONE All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!--測邊工具條-->
+    <div class="side-bar">
+        <a href="" class="email"></a>
+        <a href="" class="line"></a>
+        <a href="" class="tel"></a>
+        <a href="" class="favorable"></a>
+        <a href="" class="compute"></a>
+    </div>
+    <script>
+
+
+
+        //日期选择
+        if(document.attachEvent)   
+            window.attachEvent("onload", YYYYMMDDstart);   
+        else   
+            window.addEventListener('load', YYYYMMDDstart, false);  
+        function resetMainSixe(){
+            //計算中間高度
+           var footerHeight = $('.public-footer').height();
+           var mainOffsetTop = $('.main-content').offset().top;
+           var winHeight = $(window).height();
+           $('.main-content').css({'min-height':winHeight-footerHeight-mainOffsetTop -2 + "px"})
+        }
+       $(function() {
+             //隱藏下拉選擇
+            $('html').on('click',function(e){
+                //地區選擇
+                if(!$(e.target).hasClass('select-box-wrap') && !$(e.target).parents('div').hasClass('select-box-wrap')){
+                    $('.select-option').hide();
+                }
+                
+            })
+            //下拉选择
+            $('.select-box').click(function(){
+                var selectOption = $(this).siblings('.select-option');
+                if(selectOption.is(":hidden")){
+                    selectOption.show();
+                }else{
+                    $('.select-option').hide();
+                }
+            })
+           //下拉地址选择
+           $('.confirm-btn').click(function(){
+               var isChecked = $('.option-item > .left > .checkbox-label').children('input:checked');
+               var text="";
+               for(var i = 0; i < isChecked.length;i++){
+                   if($(isChecked[i]).is(':checked')){
+                       if(i != isChecked.length-1){
+                           text+=$(isChecked[i]).siblings('.text').text()+'/';
+                       }else{
+                           text+=$(isChecked[i]).siblings('.text').text();
+                       }
+                   }
+
+               }
+               $(this).parents('.select-option').siblings('.select-box').find('.text').html(text);
+               //$('.select-box > .text').html(text);
+               $('.select-option').hide();
+
+           })
+           $('.option-item > .right > .checkbox-label').click(function(){
+               var checkboxs = $(this).parents('.right').find('input[type="checkbox"]');
+               for(var i = 0;i < checkboxs.length;i++){
+                   if($(checkboxs[i]).is(":checked")){
+                       $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=true;
+                       return;
+                   }
+               }
+               $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=false;
+           })
+
+         resetMainSixe();
+         $(window).resize(function(){
+            resetMainSixe();
+         })
+       })
+    </script>
+
+</body>
+</html>

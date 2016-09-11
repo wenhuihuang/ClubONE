@@ -154,8 +154,8 @@
   font-weight:bold;
 }
 .personal .inline-item{
-   margin-right:20px;
- }
+  margin-right:20px;
+}
 .personal .row{
   margin:10px 0;
 }
@@ -367,3 +367,43 @@
   width:240px;
 }
 /*中间内容结束*/
+/*登录*/
+.login-info-tips {
+  padding: 10px 15px;
+  background: #FDE4E4;
+}
+.login-info-tips .user-name {
+  color: #FF1131;
+}
+
+.default-link {
+  color: #0F5DFD;
+}
+
+.personage-info {
+  padding: 10px;
+}
+.personage-info .row {
+  margin: 8px 0;
+}
+.personage-info .row .item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 40px;
+}
+
+.blue-link {
+  color: #0F5DFD;
+}
+
+.login-btn {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background: #FF1131;
+  padding: 8px 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

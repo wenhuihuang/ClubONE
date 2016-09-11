@@ -17,6 +17,10 @@ var calendar = function(b)
 J.exend( calendar.prototype, {
     get : function(obj)
 	{
+		/*後加是為了多個*/
+		$('.currentA').removeClass('currentA')
+		$(obj.self).addClass('currentA');
+		/*後加是為了多個*/
 	    var ev = J.gtev(), e = ev.srcElement || ev.target, id;
 		if( obj && obj.id ) id = J(obj.id).val(); else id = e.value;
 		
@@ -76,11 +80,23 @@ J.exend( calendar.prototype, {
 			if(dNow < 10 ){
 				dNow = '0' + dNow;
 			}
-			$('#year').val(yNow);
-			YYYYDD(yNow);
-			$('#month').val(mNow);
-			MMDD(mNow);
-			$('#day').val(dNow);
+			
+			/*多個*/
+			if($('#year').length <= 0){
+				$('.currentA').siblings('.year').val(c.y);
+				//YYYYDD1(yNow);
+				$('.currentA').siblings('.month').val(c.m);
+				//MMDD1(mNow);
+				$('.currentA').siblings('.day').val(d);
+			}else{
+				//单个
+				$('#year').val(yNow);
+				YYYYDD(yNow);
+				$('#month').val(mNow);
+				MMDD(mNow);
+				$('#day').val(dNow);
+			}
+			
 
 		});
 	},
@@ -210,11 +226,24 @@ J.exend( calendar.prototype, {
 		time = c.time ? new Date().toLocaleTimeString() : '';
 		if( time != '' ) time = time.length < 8 ? ' 0' + time : ' ' + time;
 		/*设置左边值*/
-		$('#year').val(c.y);
-		YYYYDD(c.y);
-		$('#month').val(c.m);
-		MMDD(c.m);
-		$('#day').val(d);
+		
+		/*多個*/
+		if($('#year').length <= 0){
+			$('.currentA').siblings('.year').val(c.y);
+			//YYYYDD1(c.y);
+			$('.currentA').siblings('.month').val(c.m);
+			//MMDD1(c.m);
+			$('.currentA').siblings('.day').val(d);
+		}else{
+			//单个
+			$('#year').val(c.y);
+			YYYYDD(c.y);
+			$('#month').val(c.m);
+			MMDD(c.m);
+			$('#day').val(d);
+		}
+				
+
 
 		if( c.type == '-')
 		    J(c.inu).val( c.y + '-' + c.m + '-' + d + time );

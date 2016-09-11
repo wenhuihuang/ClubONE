@@ -1,0 +1,121 @@
+@charset "utf-8";
+.home-icon{
+    background: url(../img/home_icons.png) no-repeat;
+}
+.banner img{
+    width:100%;
+    display: block;
+    margin:0 auto;
+    /* position: absolute; */
+}
+.banner{
+     position:relative;
+}
+/*为什么加入我们*/
+.lists{
+    margin-left:-7px;
+    margin-right:-7px;
+}
+.why-join-text{
+    width: 740px;
+    height: 87px;
+    bottom:0;
+    top:0;
+    margin:auto 0;
+    margin-bottom:280px;
+    left:0;
+    position: absolute;
+    background:url(../img/why_join_tips_img.jpg) no-repeat center center;
+}
+.info-text-bottom{
+    position: relative;
+}
+.info-text-bottom .fl{
+    width:340px;
+    font-size:13px;
+}
+.lists .item{
+    width:503px;
+    height: 403px;
+    padding:20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+    margin:7px;
+}
+.lists .box-border{
+    width:100%;
+    height:100%;
+    border:1px solid #FD7B8A;
+    position:relative;
+}
+.lists .info-text{
+    background:#FF1131;
+    position:absolute;
+    bottom:-20px;
+    left:-20px;
+    right:-20px;
+    padding:20px;
+}
+.info-text .t-1{
+    color:#fff;
+    font-size:16px;
+    margin-bottom:8px;
+}
+.info-text .t-2{
+    color:#fff;
+    font-size:14px;
+    margin-bottom:10px;
+}
+.go-btn{
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    width:118px;
+    height: 29px;
+    right:-10px;
+    bottom:-10px;
+    background: url(../img/go_btn.gif) no-repeat center center;
+    -webkit-background-size:100%;
+    background-size:100%;
+}
+/*列表2*/
+.lists2 .item{
+    width:100%;
+    background:#FF1131;
+}
+.lists2 .item .img{
+    height:100%;
+    width:640px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.lists2 .item .img img{
+    display: block;
+    width:100%;
+}
+.lists2 .info-text{
+    width:300px;
+    display: inline-block;
+    vertical-align: top;
+    background:#FF1131;
+}
+.lists2 .item-con{
+    position:relative;
+}
+.lists2 .box-border{
+    top:20px;
+    left:20px;
+    bottom:20px;
+    right:0;
+    border:1px solid #FD7B8A;
+    position:absolute;
+    border-right:none;
+}
+
+
+
+
+
