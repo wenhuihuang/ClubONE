@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/DialogA.js"></script>
+</head>
+<body>
+<div>
+    <a href="javascript:;" class="photo">埸地相片</a>
+    <a href="javascript:;" class="address">埸地地址</a>
+    <a href="javascript:;" class="traffic">交通設施</a>
+    <a href="javascript:;" class="wedding">婚宴套餐</a>
+    <a href="javascript:;" class="site-360">360° 場景</a>
+    <a href="javascript:;" class="video">實景短片</a>
+    <a href="javascript:;" class="plan">埸地圖則</a>
+    <a href="javascript:;" class="feature">埸地特色</a>
+    <a href="javascript:;" class="wine">席前酒會</a>
+    <a href="javascript:;"  class="theme">主題婚宴</a>
+    <a href="javascript:;" class="central">婚禮統籌</a>
+    <a href="javascript:;" class="billing">如何计算最低消费</a>
+</div>
+<script>
+    $(function () {
+
+        $('.photo').click(function () {
+            var dialog = new DialogA({
+                width:800,
+                height:600,
+                url:"popCont/photo.html",
+                border:"none"
+            })
+
+            dialog.show()
+        })
+        $('.address').click(function () {
+            var dialog = new DialogA({
+                width:840,
+                height:670,
+                url:"popCont/address_map.html"
+            })
+
+            dialog.show()
+        })
+        $('.traffic').click(function () {
+            var dialog = new DialogA({
+                width:720,
+                height:690,
+                url:"popCont/traffic.html"
+            })
+
+            dialog.show()
+        })
+        $('.wedding').click(function () {
+            var dialog = new DialogA({
+                width:1000,
+                height:765,
+                url:"popCont/wedding.html"
+            })
+
+            dialog.show()
+        })
+        $('.site-360').click(function () {
+            var dialog = new DialogA({
+                width:1130,
+                height:725,
+                border:'none',
+                url:"popCont/360site.html"
+            })
+
+            dialog.show()
+        })
+        $('.video').click(function () {
+            var dialog = new DialogA({
+                width:800,
+                height:450,
+                border:'none',
+                url:"popCont/video.html"
+            })
+
+            dialog.show()
+        })
+        $('.plan').click(function () {
+            var dialog = new DialogA({
+                width:728,
+                height:755,
+                url:"popCont/plan.html"
+            })
+
+            dialog.show()
+        })
+        $('.feature').click(function () {
+            var dialog = new DialogA({
+                width:728,
+                height:518,
+                url:"popCont/feature.html"
+            })
+
+            dialog.show()
+        })
+        $('.wine').click(function(){
+            var dialog = new DialogA({
+                width:725,
+                height:815,
+                url:"popCont/wine_party.html"
+            })
+
+            dialog.show()
+        })
+        $('.theme').click(function(){
+            var dialog = new DialogA({
+                width:725,
+                height:1075,
+                url:"popCont/theme.html"
+            })
+
+            dialog.show()
+        })
+        $('.central').click(function () {
+            var dialog = new DialogA({
+                width:725,
+                height:932,
+                url:"popCont/central_planners.html"
+            })
+
+            dialog.show()
+        })
+
+        $('.billing').click(function(){
+            var dialog = new DialogA({
+                width:848,
+                height:1170,
+                url:"popCont/billing.html"
+            })
+
+            dialog.show()
+        })
+
+    })
+</script>
+</body>
+</html>

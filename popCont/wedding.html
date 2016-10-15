@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <style>
+        .clearfix:after{
+            display: block;
+            height:0;
+            content:'';
+            visibility: hidden;
+            clear: both;
+        }
+        .tab-content .lists .item,.price .item{
+            float:left;
+            width:20%;
+        }
+        .tab-content{
+            border-left: 1px solid #FF8192;
+            border-right: 1px solid #FF8192;
+            border-bottom: 1px solid #FF8192;
+            border-top: 1px solid #FF8192;
+            /* padding: 28px; */
+            height: 625px;
+            overflow: auto;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .tab-title{
+            height: 34px;
+            line-height: 34px;
+
+        }
+        .tab-title a{
+            float:left;
+            padding:0 28px;
+            background: #FF1131;
+            color:#fff;
+            margin-right:2px;
+            border-top:1px solid #FF8192;
+            border-right:1px solid #FF8192;
+            border-left:1px solid #FF8192;
+        }
+        .tab-title .active{
+            background: #fff;
+            color:#FF1C3B;
+            margin-bottom: -1px;
+            padding-bottom:1px;
+        }
+        .tab-content .item-con{
+            display: none;
+        }
+        .tab-content .active{
+            display: block;
+        }
+        .price .new{
+            color:#FF1131;
+        }
+        .tab-content .info .left,.tab-content .info .right{
+            width:50%;
+        }
+        .tab-content .info .right{
+            text-align: right;
+        }
+        .tab-content .price{
+            padding:10px 20px;
+        }
+        .tab-content .info{
+            padding:8px 20px;
+        }
+        .tab-content .info .item{
+            padding: 0;
+        }
+        .tips-bar{
+            color:#fff;
+            margin-bottom:20px;
+            padding-left:20px;
+            height: 40px;
+            line-height: 40px;
+            background: #FF1131 url(../img/tips_bg.png) no-repeat center right;
+        }
+        .meal-title{
+            height: 80px;
+            line-height: 80px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+        .meal-title .t1{
+            font-size: 20px;
+            color:#FF1131;
+        }
+        .meal-title .t2{
+            font-size: 18px;
+        }
+        .tab-wrap{
+            margin-bottom:20px;
+            margin-left:20px;
+            margin-right:20px;
+            line-height: 26px;
+        }
+        .reserve-btn-wrap{
+            border:1px solid #FD2E4A;
+            border-radius: 4px;
+            width:90%;
+            margin:0 auto;
+            font-size: 13px;
+            padding: 2px;
+            text-align: right;
+        }
+        .reserve-btn-wrap span,.reserve-btn-wrap a{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .reserve-btn-wrap .reserve-btn{
+            width:174px;
+            height: 44px;
+            background:url(../img/venue_ding_btn.png) no-repeat center center;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+        .price .former {
+            text-decoration: line-through;
+        }
+        .tab-content .info .tit {
+            color: #FF1131;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .price .new {
+            color: #FF2943;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .question-icon{
+            display: inline-block;
+            vertical-align: middle;
+            width:20px;
+            height:20px;
+            background:url(../img/card_tips.png) no-repeat center center;
+        }
+        .text-middle{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .color-FE384D{
+            color:#FE384D;
+        }
+        .lists .item {
+            width: 308px;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="meal-title">
+        <span class="t1">婚宴套餐</span>
+        <span class="t2">（計算在最低消費，套餐無需網上選擇）</span>
+    </div>
+    <!-- tab -->
+    <div class="tab-wrap">
+        <div class="tab-title clearfix ">
+            <a href="javascript:;" class="active">晚間中式婚宴</a>
+            <a href="javascript:;">晚間証婚套餐</a>
+            <a href="javascript:;">午間中式婚宴</a>
+            <a href="javascript:;">午間證婚套餐</a>
+            <a href="javascript:;">無憂簡約證婚 </a>
+        </div>
+        <div class="tab-content">
+            <div class="item-con active" >
+                <div class="lists clearfix">
+                    <div class="item">
+                        <h6 class="tit">佳偶天成</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>鮮蝦海皇卷 </li>
+                            <li>濃湯海味翅 /</li>
+                            <li>海皇燴竹笙 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>蠔皇扣原隻鮑魚 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">永結同心</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>野菌泡蝦球 </li>
+                            <li>花枝海皇卷 </li>
+                            <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>珊瑚扒翡翠 </li>
+                            <li>蠔皇扣鮑片 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">百年好合</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">龍鳳呈祥</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">天長地久</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price clearfix">
+                    <div class="item">
+                        <p class="former"><span>$5,688</span></p>
+                        <p class="new"><span>$4,550/席</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="former"><span>$5,688</span></p>
+                        <p class="new"><span>$4,550/席</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="former"><span>$5,688</span></p>
+                        <p class="new"><span>$4,550/席</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="former"><span>$5,688</span></p>
+                        <p class="new"><span>$4,550/席</span></p>
+                    </div>
+                    <div class="item">
+                        <p class="former"><span>$5,688</span></p>
+                        <p class="new"><span>$4,550/席</span></p>
+                    </div>
+                </div>
+                <div class="info clearfix ">
+                    <div class="left fl">
+                        <div class="tit">酒水套餐（席間無限供應）</div>
+                        <div class="item">每席$500（汽水、啤酒）</div>
+                        <div class="item">每席$600（汽水、啤酒、鮮橙汁）</div>
+                        <div class="item">每席$800（汽水、啤酒、鮮橙汁、紅酒）</div>
+                    </div>
+                    <div class="right fr">
+                        <div class="item">*毋須即時選擇任何套餐，可留待次訂時決定選擇</div>
+                        <div class="item">*預訂一經確認，所有餐單內容及價錢即時獲得保證</div>
+                        <div class="item">
+                            <div class="reserve-btn-wrap" style="width:350px;display:inline-block;">
+                                <span style="color:#FF1131;display: inline-block;vertical-align: middle;">
+                                    <span style="color:#FF1131;display: inline-block;vertical-align: bottom;">訂金為只需</span><span style="font-size:22px;display: inline-block;vertical-align: bottom;padding:0 8px;">$7,200</span>
+                                </span>
+                                <a href="javascript:;" class="reserve-btn bg-img"></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="fl color-FE384D" style="margin-left:104px;">訂金為當晚最低消費的10%</span>
+                            <span class="inline-block fr" ><span class="text-middle">如何計算最低消費</span><span class="icon bg-img question-icon text-middle"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-con" >
+                <div class="lists clearfix">
+                    <div class="item">
+                        <h6 class="tit">佳偶天成</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬2 </li>
+                            <li>鮮蝦海皇卷 </li>
+                            <li>濃湯海味翅 /</li>
+                            <li>海皇燴竹笙 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>蠔皇扣原隻鮑魚 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">永結同心</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>野菌泡蝦球 </li>
+                            <li>花枝海皇卷 </li>
+                            <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>珊瑚扒翡翠 </li>
+                            <li>蠔皇扣鮑片 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">百年好合</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">龍鳳呈祥</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">天長地久</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price"></div>
+                <div class="info"></div>
+            </div>
+            <div class="item-con" >
+                <div class="lists clearfix">
+                    <div class="item">
+                        <h6 class="tit">佳偶天成</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬3 </li>
+                            <li>鮮蝦海皇卷 </li>
+                            <li>濃湯海味翅 /</li>
+                            <li>海皇燴竹笙 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>蠔皇扣原隻鮑魚 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">永結同心</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>野菌泡蝦球 </li>
+                            <li>花枝海皇卷 </li>
+                            <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>珊瑚扒翡翠 </li>
+                            <li>蠔皇扣鮑片 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">百年好合</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">龍鳳呈祥</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">天長地久</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price"></div>
+                <div class="info"></div>
+            </div>
+            <div class="item-con" >
+                <div class="lists clearfix">
+                    <div class="item">
+                        <h6 class="tit">佳偶天成</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬4 </li>
+                            <li>鮮蝦海皇卷 </li>
+                            <li>濃湯海味翅 /</li>
+                            <li>海皇燴竹笙 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>蠔皇扣原隻鮑魚 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">永結同心</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>野菌泡蝦球 </li>
+                            <li>花枝海皇卷 </li>
+                            <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>珊瑚扒翡翠 </li>
+                            <li>蠔皇扣鮑片 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">百年好合</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">龍鳳呈祥</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">天長地久</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price"></div>
+                <div class="info"></div>
+            </div>
+            <div class="item-con" >
+                <div class="lists clearfix">
+                    <div class="item">
+                        <h6 class="tit">佳偶天成</h6>
+                        <ul>
+                            <li>5鴻運脆皮乳豬6 </li>
+                            <li>鮮蝦海皇卷 </li>
+                            <li>濃湯海味翅 /</li>
+                            <li>海皇燴竹笙 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>蠔皇扣原隻鮑魚 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">永結同心</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>野菌泡蝦球 </li>
+                            <li>花枝海皇卷 </li>
+                            <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                            <li>清蒸海石斑 </li>
+                            <li>珊瑚扒翡翠 </li>
+                            <li>蠔皇扣鮑片 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋雞絲飯 </li>
+                            <li>蟹籽炆伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">百年好合</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">龍鳳呈祥</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h6 class="tit">天長地久</h6>
+                        <ul>
+                            <li>鴻運脆皮乳豬 </li>
+                            <li>京蔥什菌大蝦球 </li>
+                            <li>百花釀蟹鉗  </li>
+                            <li>
+                                紅燒竹笙雞絲翅 /
+                                海皇燴竹笙
+                            </li>
+                            <li>清蒸海石斑 </li>
+                            <li>瑤柱花菇扒瓜脯 </li>
+                            <li>蠔皇鮑片扣花膠 </li>
+                            <li>脆皮吊燒雞 </li>
+                            <li>砂鍋海鮮炒飯 </li>
+                            <li>參菇海味伊麵 </li>
+                            <li>意式泡芙酥 </li>
+                            <li>蓮子百合紅豆糕</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price"></div>
+                <div class="info"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(function(){
+        //tab切换
+        $('.tab-title').children('a').click(function(){
+            $(this).addClass('active').siblings('a').removeClass('active');
+            var tabContent = $(this).parents('.tab-title').siblings('.tab-content').children('.item-con');
+            $(tabContent[$(this).index()]).addClass('active').siblings('.item-con').removeClass('active');
+        })
+    })
+</script>
+</body>
+</html>

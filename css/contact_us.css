@@ -11,26 +11,26 @@
   top: 182px;
   right: 0;
   z-index: 10000; }
-  .side-bar a {
-    display: block;
-    width: 77px;
-    margin-bottom: 12px;
-    background: url("../img/side_bar_icon.png") no-repeat; }
-    .side-bar a.email {
-      height: 74px;
-      background-position: 0 0; }
-    .side-bar a.line {
-      height: 74px;
-      background-position: 0 -86px; }
-    .side-bar a.tel {
-      height: 74px;
-      background-position: 0 -171px; }
-    .side-bar a.favorable {
-      height: 74px;
-      background-position: 0 -258px; }
-    .side-bar a.compute {
-      height: 112px;
-      background-position: 0 -345px; }
+.side-bar a {
+  display: block;
+  width: 77px;
+  margin-bottom: 12px;
+  background: url("../img/side_bar_icon.png") no-repeat; }
+.side-bar a.email {
+  height: 74px;
+  background-position: 0 0; }
+.side-bar a.line {
+  height: 74px;
+  background-position: 0 -86px; }
+.side-bar a.tel {
+  height: 74px;
+  background-position: 0 -171px; }
+.side-bar a.favorable {
+  height: 74px;
+  background-position: 0 -258px; }
+.side-bar a.compute {
+  height: 112px;
+  background-position: 0 -345px; }
 
 /*测边工具条结束*/
 .main-content{
@@ -43,7 +43,7 @@
 .main-content .wrap .content-left {
   width: 700px; }
 .main-content .wrap .content-right {
-  width: 300px; 
+  width: 300px;
   margin-left:8px;}
 .title-head{
   height:45px;
@@ -54,8 +54,8 @@
   padding:0 20px;
 }
 .red-text{
-  color:red;
-}
+   color:red;
+ }
 .font-18{
   font-size: 18px;
 }
@@ -223,4 +223,3 @@
   margin-right:8px;
   background: url(../img/email_blue_icon.png) no-repeat center center;
 }
-/*# sourceMappingURL=contact_us.css.map */

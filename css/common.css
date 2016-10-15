@@ -58,6 +58,10 @@ body{
 .font-16{
     font-size: 16px;
 }
+.inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
 /*自定checkbox樣式*/
 .checkbox{
     display: inline-block;

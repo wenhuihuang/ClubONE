@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../js/popImgSlider/css/style.css">
+
+    <script type="text/javascript" src="../js/popImgSlider/js/prototype.js"></script>
+    <script type="text/javascript" src="../js/popImgSlider/js/ImageSlide.js"></script>
+    <style>
+        .main{
+            padding:12px 0;
+            background:url(../img/plan_bg.gif)no-repeat top left;
+            background-size:100% 100%;
+        }
+        .top-title{
+            padding:20px 78px;
+        }
+        .top-title span{
+            font-size:20px;
+            font-weight:bold;
+            color:#E60020;
+        }
+        .title{
+            color:#E70D2B;
+        }
+        .slide li .text p.detail{
+            color:#333;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="top-title">
+        <span>埸地特色</span>
+    </div>
+    <div id="focusImage" class="slide">
+
+        <ul class="contents">
+            <li class="current">
+                <div class="image"><img src="../images/plan_img_1.png" width="400" height="282"></div>
+                <div class="text">
+                    <span class="title">宏麗殿堂 超凡顯赫</span>
+                    <p class="detail">華麗典雅，逾2000呎雲石大堂，彰顯非凡貴氣的結婚場地。</p>
+                </div>
+            </li>
+            <li>
+                <div class="image"><img src="../images/reg_img.png" width="400" height="282"></div>
+                <div class="text">
+                    <span class="title">新华社英文推出李克强系列旧照</span>
+                    <p class="detail">12月23日，新华英文推出李克强系列新老照片，题目为《Profile photos: Li Keqiang: A man who puts people first》。</p>
+                </div>
+            </li>
+            <li>
+                <div class="image"><img src="../images/plan_img_1.png" width="400" height="282"></div>
+                <div class="text">
+                    <span class="title">中国老一辈领导的夫人们</span>
+                    <p class="detail">劳安与朱镕基同是湖南人，且都在湘西上过学。朱镕基与劳安的结识，得益于朱镕基中学时的一位同窗好友，劳安是朱镕基一位名为劳特夫同学的妹妹。</p>
+                </div>
+            </li>
+
+        </ul>
+
+
+
+
+        <span class="link-watch pre down"></span>
+        <span class="link-watch next down"></span>
+
+    </div>
+
+
+
+
+</div>
+</body>
+<script type="text/javascript">
+    new ImageSlide({
+        project:"#focusImage",
+        content:".contents li",
+        //tigger:".triggers a",
+        //dot:".icon-dot a",
+        watch:".link-watch",
+        auto:!0,
+        hide:!0
+    })
+</script>
+</html>

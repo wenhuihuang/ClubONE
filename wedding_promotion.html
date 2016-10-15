@@ -627,12 +627,13 @@
                                 {"date":"20160821","text":"全單7折","bg":"#F6B07F"},
                                 {"date":"20160822","text":"全單8折","bg":"#FFE102"},
                                 {"date":"20161024","text":"全單9折","bg":"#58BCED"},
-                                {"type":"20160823","text":"正價","bg":"#F0EFED"},
-                                {"type":"20160823","text":"附加費用10%","bg":"#9CC80F"},
+                                {"date":"20160823","text":"正價","bg":"#F0EFED"},
+                                {"date":"20160827","text":"附加費用10%","bg":"#9CC80F"},
                                 {"date":"20160923","text":"全單9折","bg":"#58BCED"},
-                                {"type":"20160923","text":"正價","bg":"#F0EFED"},
-                                {"type":"20161023","text":"附加費用10%","bg":"#9CC80F"},
-                                {"type":"20160823","text":"附加費用10%","bg":"特選日子 - 額外回贈$6,000"}
+                                {"date":"20160924","text":"正價","bg":"#F0EFED"},
+                                {"date":"20161023","text":"附加費用10%","bg":"#9CC80F"},
+                                {"date":"20160823","text":"附加費用10%","bg":"red"},
+                                {"date":"20160824","text":"附加費用10%","bg":"blue","bgImg":"img/calendar_t_bg.png"}
                             ];
         function eachCalendar(y,m,d){
             if((m+1) <10 ){
@@ -655,8 +656,14 @@
                     if(dateArray[i] == infoArray[j].date ){
                         var text = infoArray[j].text;
                         var bg = infoArray[j].bg;
-                        $('#'+dateArray[i]).css({"background":bg})
-                        $('#'+dateArray[i]).append('<span>'+text+'</span>')
+                        if(bg.indexOf("png") > 0){
+                            $('#'+dateArray[i]).css({"background":"url("+bg+") no-repeat  center 19px "})
+                            $('#'+dateArray[i]).append('<span>'+text+'</span>')
+                        }else{
+                            $('#'+dateArray[i]).css({"background":bg})
+                            $('#'+dateArray[i]).append('<span>'+text+'</span>')
+                        }
+
                     }
                 }
 

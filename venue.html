@@ -327,6 +327,9 @@
             <li data-spic="images/banner1.jpg" style="display: none; opacity: 0;">
                 <a href=""><img src="images/banner1.jpg" alt=""></a>
             </li>
+            <li data-spic="images/banner1.jpg" style="display: none; opacity: 0;">
+                <a href=""><img src="images/banner1.jpg" alt=""></a>
+            </li>
         </ul>
         <!-- form -->
         <div class="wrap banner-form-wrap">
@@ -542,7 +545,7 @@
                                         <a href="javascript:;" class="reserve-btn bg-img"></a>
                                     </div>
                                 </div>
-                                <div class="item">如何計算最低消費</div>
+                                <div class="item"><span class="inline-block">如何計算最低消費</span><span class="icon bg-img question-icon"></span></div>
                             </div>
                         </div>
                     </div>
@@ -1113,7 +1116,7 @@
                             <span style="color:#FF1131;">訂金為當晚最低消費的10%</span>
                             <a href="javascript:;" class="reserve-btn bg-img"></a>
                         </div>
-                        <p style="font-size:12px;text-align: right;">如何計算最低消費<span class="icon bg-img"></span></p>
+                        <p style="font-size:12px;text-align: right;"><span class="inline-block">如何計算最低消費</span><span class="icon bg-img question-icon"></span></p>
                     </div>
                 </div>
             </div>
@@ -1259,6 +1262,17 @@
         <a href="" class="favorable"></a>
         <a href="" class="compute"></a>
     </div>
+
+    <!--彈框-->
+    <div class="over-pop">
+        <div class="pop-con">
+            <span class="close-btn"></span>
+            <div class="pop-center">
+                <img class="img" src="images/how_img.png" alt="">
+            </div>
+        </div>
+    </div>
+
     <!-- 图片轮播 -->
     <script src="js/imgSlider.js"></script>
     <script>
@@ -1333,6 +1347,10 @@
                 var tabContent = $(this).parents('.tab-title').siblings('.tab-content').children('.item-con');
                 $(tabContent[$(this).index()]).addClass('active').siblings('.item-con').removeClass('active');
             })
+           //关闭弹框
+           $('.close-btn').click(function(){
+               $(".over-pop").hide();
+           })
        })
     </script>
     <script>

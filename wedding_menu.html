@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/wedding_menu.css">
+    <!--图片轮播-->
+    <link rel="stylesheet" href="css/imgSlider.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--底部圖片輪播-->
+    <script src="js/slider.js"></script>
+    <!-- 弹出日期选择 -->
+    <script type="text/javascript" src="js/lhgcore.js"></script>
+    <script type="text/javascript" src="js/lhgcalendar.js"></script>
+
+
+</head>
+<body>
+    <!--头部-->
+    <div class="public-header">
+        <div class="wrap clearfix">
+            <div class="logo fl">
+                <a href="home.html">
+                    <img src="img/logo.png" alt="會所一號">
+                </a>
+            </div>
+            <div class="contact fr">
+                <h4 class="contact-label">網上客戶服務熱線</h4>
+                <p class="contact-tel">致電：82099633</p>
+                <p class="contact-explain">（星期一至星期日9:30am至7:00pm）</p>
+            </div>
+        </div>
+    </div>
+    <!--头部菜单-->
+    <div class="public-header-menu">
+        <div class="wrap clearfix">
+            <ul class="left-item fl clearfix">
+                <li class="active">
+                    <span>首頁</span>
+                </li>
+                <li><span>優惠婚宴搜尋</span></li>
+                <li>
+                    <span>婚宴埸地<i class="icon"></i></span>
+                    <div class="sub-menu" style="">
+                        <div class="item">
+                            <span>九龍東</span>
+                        </div>
+                        <div class="item">
+                            <span>九龍半山<i class="icon"></i></span>
+                            <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>銀灘</span>
+                        </div>
+                        <div class="item">
+                            <span>郵輪堤岸</span>
+                        </div>
+                        <div class="item">
+                            <span>德藝會</span>
+                        </div>
+                        <div class="item">
+                            <span>博藝會<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>大舞臺</span>
+                        </div>
+                        <div class="item">
+                            <span>萬濤</span>
+                        </div>
+                        <div class="item">
+                            <span>淺水灣<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>科學園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>海濱長廊</span>
+                        </div>
+                        <div class="item">
+                            <span>太子東堤</span>
+                        </div>
+                        <div class="item">
+                            <span>愉花園<i class="icon"></i></span>
+                             <div class="three-menu">
+                                <a href="">九龍半山 (全廳)</a>
+                                <a href="">九龍半山 (A廳)</a>
+                                <a href="">九龍半山 (B廳)</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><span>限時優惠</span><i class="new-tips"></i></li>
+                <li><span>會員優惠</span></li>
+            </ul>
+            <ul class="right-item fr clearfix">
+                <li class="service">
+                    <a href="javascript:;" class="service-btn">客戶服務<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">常見問題</a>
+                        <a href="">聯絡我們</a>
+                        <a href="">網站意見</a>
+                    </div>
+                </li>
+                <li><span class="line"></span></li>
+                <li class="reg-login">
+                    <a href="javascript:;" class="reg-login-btn">登入或註冊<span class="icon"></span></a>
+                    <div class="right-item-sub">
+                        <a href="">登入</a>
+                        <a href="">建立賬戶</a>
+                        <a href="">我的預訂</a>
+                        <a href="">我的最愛埸地</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-bg"></div>
+    <!-- 主体 -->
+    <!-- 搜索 -->
+    <div class="search-wrap">
+        <form class="wrap" name="reg_testdate">
+            <div class="item address">
+                <p class="tit red">地區/埸地*</p>
+                <div class="con">
+                     <div class="select-box-wrap">
+                           <div class="select-box">
+                                <span class="text">請選擇地區/埸地</span>
+                                <span class="icon"></span>
+                           </div>
+                           <!-- 地址下拉選擇內容 -->
+                           <div class="select-option" style="display:none;">
+                                <div class="option-content">
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="a" class="checkbox-label">
+                                                <input id="a" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">香港區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="a1" class="checkbox-label">
+                                                <input id="a1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>淺水灣</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="a2" class="checkbox-label" >
+                                                <input id="a2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>大舞臺</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="b" class="checkbox-label">
+                                                <input id="b" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">九龍區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="b1" class="checkbox-label">
+                                                <input id="b1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍東</span>
+                                            </label>
+                                            <label for="b2" class="checkbox-label">
+                                                <input id="b2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>九龍半山</span>
+                                            </label>
+                                            <label for="b3" class="checkbox-label">
+                                                <input id="b3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>太子東提</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="b4" class="checkbox-label">
+                                                <input id="b4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>博藝會</span>
+                                            </label>
+                                             <label for="b5" class="checkbox-label">
+                                                <input id="b5" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>郵輪堤岸 </span>
+                                            </label>
+                                             <label for="b6" class="checkbox-label">
+                                                <input id="b6" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>海濱長廊</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="c" class="checkbox-label">
+                                                <input id="c" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">新界區 </span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            <label for="c1" class="checkbox-label">
+                                                <input id="c1" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>愉花園 </span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c2" class="checkbox-label">
+                                                <input id="c2" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>科學園</span>
+                                                <span class="new-tips home-icon"></span>
+                                            </label>
+                                            <label for="c3" class="checkbox-label">
+                                                <input id="c3" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>萬濤</span>
+                                            </label>
+                                            <label for="c4" class="checkbox-label">
+                                                <input id="c4" type="checkbox" name="">
+                                                <span class="checkbox"></span>
+                                                <span>銀灘</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                                                                      
+                             
+                                    <!-- 所有地区 -->
+                                     <div class="option-item all-option-item clearfix">
+                                        <div class="left fl">
+                                            <label for="d" class="checkbox-label">
+                                                <input id="d" type="checkbox">
+                                                <span class="checkbox"></span>
+                                                <span class="text">所有地區</span>
+                                            </label>
+                                        </div>
+                                        <div class="right fl">
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- 确定按钮 -->
+                                    <div class="btn-wrap">
+                                        <a href="javascript:;" class="confirm-btn">确定</a>
+                                    </div>
+                                </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item date">
+                <p class="tit red">婚宴日期*</p>
+                <div class="con">
+                    <select id='year' name="YYYY" onChange="YYYYDD(this.value)">
+                        <option value="">请选择 年</option>
+                    </select>
+                    <select id='month' name="MM" onChange="MMDD(this.value)">
+                        <option value="">选择 月</option>
+                    </select>
+                    <select id="day" name="DD">
+                        <option value="">选择 日</option>
+                    </select>
+                    <a href="javascript:;" class="calendar-btn home-icon" onclick="J.calendar.get({id:''});"></a>
+                </div>
+            </div>
+            <div class="item"> 
+                <p class="tit red">时段*</p>
+                <div class="con">
+                    <select class="red-select" name="" id="">
+                        <option value="">晚間</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item count">
+                <p class="tit red">預計席數</p>
+                <div class="con">
+                    <select class="red-select" name="" id="">
+                        <option value="">未定</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item">
+                <p class="tit" style="text-align: right;font-size:13px;">*必需選擇</p>
+                <div class="con">
+                    <a href="javascript:;" class="change-search  bg-img"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- banner -->
+    <div id="imageShow">
+        <!-- 图片 -->
+        <ul class="imagebg" id="imagebg">
+            <li data-spic="images/banner1.jpg" style="opacity: 0;">
+                <a href=""><img src="images/banner1.jpg" alt=""></a>
+            </li>
+            <li data-spic="images/hot_content_img_3.jpg" style="display: none; opacity: 0;">
+                <a href=""><img src="images/hot_content_img_3.jpg" alt=""></a>
+            </li>
+            <li data-spic="images/banner1.jpg" style="display: none; opacity: 0;">
+                <a href=""><img src="images/banner1.jpg" alt=""></a>
+            </li>
+            <li data-spic="images/banner1.jpg" style="display: none; opacity: 0;">
+                <a href=""><img src="images/banner1.jpg" alt=""></a>
+            </li>
+        </ul>
+        <!-- form -->
+        <div class="wrap banner-form-wrap">
+            <div class="banner-form">
+                <h6 class="tit">
+                    <span class="line"></span>
+                    <span>九龍半山(全廳)</span>
+                    <span class="line"></span>
+                </h6>
+                <div class="row address">
+                    <span class="font-16">農圃道18號UG層</span>
+                    <span class="icon bg-img"></span>
+                </div>
+                <span class="line-a"></span>
+                <div class="row">
+                    <span class="font-16">可容納席數 60席(全廳)</span>
+                </div>
+                 <span class="line-a"></span>
+                <div class="option">
+                    <div class="item c-j bg-img">
+                    </div>
+                    <div class="item d-p bg-img">
+                    </div>
+                    <div class="item t-z bg-img">
+                    </div>
+                    <div class="item t-s bg-img">
+                    </div>
+                    <div class="item s-s bg-img">
+                    </div>
+                    <div class="item l-y bg-img">
+                    </div>
+                </div>
+                <div class="reserve-btn-wrap">
+                    <span style="color:#FF1131">訂金為當晚最低消費的10%</span>
+                    <a href="javascript:;" class="reserve-btn bg-img"></a>
+                </div>
+                <div class="tips">今日已有108人瀏覽這埸地</div>
+            </div>
+        </div>
+        <!-- 图片菜单 -->
+        <div class="wrap">
+            <div class="scrollbg">
+                <div class="scroll">
+                    <a id="left_img_btn" class="s_pre" href="javascript:void(0)"></a>
+                    <div class="current" id="current" style="left: 729px;"></div>
+                    <div class="outScroll_pic">
+                        <ul class="scroll_pic cls" id="small_pic" style="left: -2608px;">
+                            <li onclick="img.play(0)" class="">
+                                <!-- <img src="images/index_ya_s.jpg"> -->
+                            </li>
+                            <li onclick="img.play(1)" class="">
+                                <!--   <img src="images/index_uc9_s.jpg"> -->
+                            </li>
+                            <li onclick="img.play(2)" class="">
+                                <!-- <img src="images/index_newlogo_s.jpg"> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <a id="right_img_btn" class="s_next" href="javascript:void(0)"></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- 婚宴套餐 -->
+    <div class="set-meal">
+       <div class="wrap">
+             <div class="meal-title">
+                <span class="t1">婚宴套餐</span>
+                <span class="t2">（計算在最低消費，套餐無需網上選擇）</span>
+            </div>
+            <!-- tab -->
+            <div class="tab-wrap">
+                <div class="tab-title clearfix ">
+                    <a href="javascript:;" class="active">晚間中式婚宴</a>
+                    <a href="javascript:;">晚間証婚套餐</a>
+                    <a href="javascript:;">午間中式婚宴</a>
+                    <a href="javascript:;">午間證婚套餐</a>
+                    <a href="javascript:;">無憂簡約證婚 </a>
+                </div>
+                <div class="tab-content">
+                    <div class="item-con active" >
+                        <div class="lists clearfix">
+                            <div class="item">
+                                <h6 class="tit">佳偶天成</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>鮮蝦海皇卷 </li>
+                                    <li>濃湯海味翅 /</li>
+                                    <li>海皇燴竹笙 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>蠔皇扣原隻鮑魚 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">永結同心</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>野菌泡蝦球 </li>
+                                    <li>花枝海皇卷 </li>
+                                    <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>珊瑚扒翡翠 </li>
+                                    <li>蠔皇扣鮑片 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">百年好合</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">龍鳳呈祥</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">天長地久</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price clearfix">
+                            <div class="item">
+                                <p class="former"><span>$5,688</span></p>
+                                <p class="new"><span>$4,550/席</span></p>
+                            </div>  
+                            <div class="item">
+                                <p class="former"><span>$5,688</span></p>
+                                <p class="new"><span>$4,550/席</span></p>
+                            </div>
+                            <div class="item">
+                                <p class="former"><span>$5,688</span></p>
+                                <p class="new"><span>$4,550/席</span></p>
+                            </div>
+                            <div class="item">
+                                <p class="former"><span>$5,688</span></p>
+                                <p class="new"><span>$4,550/席</span></p>
+                            </div>
+                            <div class="item">
+                                <p class="former"><span>$5,688</span></p>
+                                <p class="new"><span>$4,550/席</span></p>
+                            </div>
+                        </div>
+                        <div class="info clearfix ">
+                            <div class="left fl">
+                                <div class="tit">酒水套餐（席間無限供應）</div>
+                                <div class="item">每席$500（汽水、啤酒）</div>
+                                <div class="item">每席$600（汽水、啤酒、鮮橙汁）</div>
+                                <div class="item">每席$800（汽水、啤酒、鮮橙汁、紅酒）</div>
+                            </div>
+                            <div class="right fr">
+                                <div class="item">*毋須即時選擇任何套餐，可留待次訂時決定選擇</div>
+                                <div class="item">*預訂一經確認，所有餐單內容及價錢即時獲得保證</div>
+                                <div class="item">
+                                       <div class="reserve-btn-wrap" style="width:350px;display:inline-block;">
+                                        <span style="color:#FF1131">訂金為當晚最低消費的10%</span>
+                                        <a href="javascript:;" class="reserve-btn bg-img"></a>
+                                    </div>
+                                </div>
+                                <div class="item"><span class="inline-block">如何計算最低消費</span><span class="icon bg-img question-icon"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-con" >
+                        <div class="lists clearfix">
+                            <div class="item">
+                                <h6 class="tit">佳偶天成</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬2 </li>
+                                    <li>鮮蝦海皇卷 </li>
+                                    <li>濃湯海味翅 /</li>
+                                    <li>海皇燴竹笙 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>蠔皇扣原隻鮑魚 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">永結同心</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>野菌泡蝦球 </li>
+                                    <li>花枝海皇卷 </li>
+                                    <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>珊瑚扒翡翠 </li>
+                                    <li>蠔皇扣鮑片 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">百年好合</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">龍鳳呈祥</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">天長地久</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price"></div>
+                        <div class="info"></div>
+                    </div>
+                    <div class="item-con" >
+                        <div class="lists clearfix">
+                            <div class="item">
+                                <h6 class="tit">佳偶天成</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬3 </li>
+                                    <li>鮮蝦海皇卷 </li>
+                                    <li>濃湯海味翅 /</li>
+                                    <li>海皇燴竹笙 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>蠔皇扣原隻鮑魚 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">永結同心</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>野菌泡蝦球 </li>
+                                    <li>花枝海皇卷 </li>
+                                    <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>珊瑚扒翡翠 </li>
+                                    <li>蠔皇扣鮑片 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">百年好合</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">龍鳳呈祥</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">天長地久</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price"></div>
+                        <div class="info"></div>
+                    </div>
+                    <div class="item-con" >
+                        <div class="lists clearfix">
+                            <div class="item">
+                                <h6 class="tit">佳偶天成</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬4 </li>
+                                    <li>鮮蝦海皇卷 </li>
+                                    <li>濃湯海味翅 /</li>
+                                    <li>海皇燴竹笙 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>蠔皇扣原隻鮑魚 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">永結同心</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>野菌泡蝦球 </li>
+                                    <li>花枝海皇卷 </li>
+                                    <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>珊瑚扒翡翠 </li>
+                                    <li>蠔皇扣鮑片 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">百年好合</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">龍鳳呈祥</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">天長地久</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price"></div>
+                        <div class="info"></div>
+                    </div>
+                    <div class="item-con" >
+                        <div class="lists clearfix">
+                            <div class="item">
+                                <h6 class="tit">佳偶天成</h6>
+                                <ul>
+                                    <li>5鴻運脆皮乳豬6 </li>
+                                    <li>鮮蝦海皇卷 </li>
+                                    <li>濃湯海味翅 /</li>
+                                    <li>海皇燴竹笙 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>蠔皇扣原隻鮑魚 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">永結同心</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>野菌泡蝦球 </li>
+                                    <li>花枝海皇卷 </li>
+                                    <li>雲腿海味翅 /雲腿雞絲燴花膠 </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>珊瑚扒翡翠 </li>
+                                    <li>蠔皇扣鮑片 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋雞絲飯 </li>
+                                    <li>蟹籽炆伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">百年好合</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">龍鳳呈祥</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <h6 class="tit">天長地久</h6>
+                                <ul>
+                                    <li>鴻運脆皮乳豬 </li>
+                                    <li>京蔥什菌大蝦球 </li>
+                                    <li>百花釀蟹鉗  </li>
+                                    <li>
+                                        紅燒竹笙雞絲翅 /
+                                        海皇燴竹笙 
+                                    </li>
+                                    <li>清蒸海石斑 </li>
+                                    <li>瑤柱花菇扒瓜脯 </li>
+                                    <li>蠔皇鮑片扣花膠 </li>
+                                    <li>脆皮吊燒雞 </li>
+                                    <li>砂鍋海鮮炒飯 </li>
+                                    <li>參菇海味伊麵 </li>
+                                    <li>意式泡芙酥 </li>
+                                    <li>蓮子百合紅豆糕</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="price"></div>
+                        <div class="info"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="tips-bar tips-bar-down bg-img">
+                    <span>服務及設施（已包括在套餐）</span>
+                </div>
+                <div class="bar-content " style="">
+                    <div class="con-item">
+                        <p class="con-item-tit">1.專人服務</p>
+                        <p>·貼身跟進新人服務</p>
+                        <p>·跟進及回覆各項宴會星羅細節</p>
+                        <p>·燈光師設計全晚燈光</p>
+                        <p>·音樂影像控制</p>
+                        <p>·跟進起菜流程</p>
+                    </div>
+                    <div class="con-item">
+                        <p class="con-item-tit">2. 星級場地設施及配套</p>
+                        <p>·特大新娘套房運洗手間</p>
+                        <p>·酒會區及証婚區</p>
+                        <p>·麻雀區及休息區</p>
+                        <p>·高清投影機及特大投影幕</p>
+                        <p>·演唱會專業無線數碼咪</p>
+                        <p>·電腦追光燈供進場使用</p>
+                        <p>·全場電腦燈光(演唱會專業版)</p>
+                        <p>·免費敬茶龍鳳杯、祝酒用香檳杯</p>
+                        <p>·免費全場檯花</p>
+                        <p>·接待處迎賓及油畫架(附佈置及用品）</p>
+                        <p>·多層模擬蛋糕供切餅儀式及拍照</p>
+                        <p>·免費麻雀耍樂及茗茶</p>
+                        <p>·華麗嘉寶題名冊</p>
+                    </div>
+                    <div class="con-item">
+                        <p class="con-item-tit">3.新人專享</p>
+                       <p> 茶芥全免</p>
+                        <p>·優惠價升級菜式</p>
+                        <p>·免費泊車位</p>
+                       <p> (不適用於銀灘及淺水灣分店)</p>
+                        <p>·自來洋酒紅酒免開瓶費(無限)</p>
+                        <p>·ClubDining餐飲會籍一年</p>
+                       <p> 7折享用私人會所內之餐飲服務</p>
+                        <p>·精美請柬連封套(每席8張)不包括印刷服務</p>
+                      <p>  ·接受Visa及Master付款，不另收費</p>
+                       <p> ·八磅鮮忌廉結婚蛋糕(30席以上12磅)</p>
+
+                        <p class="con-item-tit">4.20席或以上正價菜單額外優惠</p>
+                       <p> ·4小時花車(豪華平治房車)連司機接送</p>
+                       <p> (不適用銀灘、九龍半山、郵輪堤岸、淺水灣、科學園</p>
+                       <p> 及海濱長廊分店)</p>
+                       <p> ·豪華蜜月客房1晚</p>
+                    </div>
+                    <div class="bar-bottom clearfix">
+                        <p style="font-weight: bold;font-size:16px;margin-bottom:8px;">條款細則:</p>
+                        <p class="item">·所有菜譜及優惠如有更改，恕不另行通知，不適用於已落訂之婚宴</p>
+                        <p class="item">·任何有關各項優惠爭議，ClubONE保留最終決定權</p>
+                        <p class="item">·上述優惠涉及之產品，服務質素及交易，ClubONE恕不負責 </p>
+                        <p class="item">·只適用於中式晚間婚宴套餐</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="tips-bar tips-bar-down bg-img">
+                    <span>星級優惠</span>
+                </div>
+                <div class="bar-content  clearfix">
+                    <div class="left fl">
+                        <img src="images/wedding_left.png" alt="">
+                    </div>
+                    <div class="right fr">
+                        <img src="images/wedding_right.png" alt="">
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!-- 附加服務 -->
+    <div class="wrap">
+        <div class="meal-title">
+            <span class="t1">附加服務</span>
+            <span class="t2">(不計算在最低消費，可到場地自選)</span>
+        </div>
+        <!-- tab -->
+        <div class="tab-wrap">
+            <div class="tab-title clearfix ">
+                <a href="javascript:;" class="active">席前酒會</a>
+                <a href="javascript:;">主題婚宴</a>
+                <a href="javascript:;">婚宴策劃服務</a>
+            </div>
+            <div class="tab-content">
+                <div class="item-con active" >
+                    <div class="describe">
+                        尊貴體驗由婚禮席前酒會 (cocktail reception) 開始，我們細心準備多款別出心栽小食美酒，務求令到結婚席前酒會滿足賓客口腹之樂，迎接一夜盛宴。Impress your guest in the very beginning by cocktail reception
+                    </div>
+                    <div class="menu-classify clearfix">
+                        <div class="classify-left fl">
+                            <div class="top clearfix">
+                                <div class="item fl">
+                                    <h6 class="tit">細嚼美味</h6>
+                                    <ul>
+                                        <li>1吞東黑蟹籽多士 </li>
+                                        <li>2香烤德國肉腸多士 </li>
+                                        <li>3意大利青芝麻闊麵 </li>
+                                        <li>4法式蔥油長通粉 </li>
+                                        <li>5凱撒沙律 </li>
+                                        <li>6什菜沙律</li>
+                                    </ul>
+                                </div>
+                                 <div class="item fl">
+                                    <h6 class="tit">細嚼美味</h6>
+                                    <ul>
+                                        <li>什果賓治（Fruit Punch)  </li>
+                                        <li>紅酒賓治 (Sangria) </li>
+                                        <li>溥荷賓治（Mint Punch)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <p>以上套餐適用於Club0NE旗下所有分店 </p>
+                                <p>．須受有關條款限制，詳情請與宴會部聯絡</p>
+                                <p>．圖片只供參考</p>
+                            </div>
+                        </div>
+                        <div class="classify-right clearfix fl">
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                            <div class="item-wrap">
+                                <div class="item">
+                                    <img src="images/fan_1.jpg" alt="">
+                                </div>
+                                <span class="no">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="item-con" >
+                    
+                </div>
+                 <div class="item-con" >
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 埸地介紹 -->
+    <div class="introduce">
+      <div class="wrap">
+            <div class="clearfix title-top">
+                <h6 class="tit fl">埸地介紹</h6>
+                <a href="" class="look-field fr bg-img"></a>
+            </div>
+            <p class="con">
+                座落於何文田半山的ClubONE (Kowloon Peak)，為新人打造尊貴時尚品味的會所婚宴，可筵開60席的宴會廳，2,000呎獨立証婚區，空間寬敞，雙入口設計具清雅寬敞、華麗高雅兩款風格，可按婚禮主題揀選，新人還可站在逾50呎長的大舞台上接受眾賓客的祝福，凸顯非一般的華麗感覺，配合頂級影音設備、智能燈光系統及現場樂隊伴奏，為你締造畢生難忘的一晚
+            </p>
+            <div class="btn-wrap">
+                <a href="" class="more-btn">閱讀更多&gt;&gt;</a>
+            </div>
+      </div>
+    </div>
+    <!--近期新人評價-->
+    <div class="evaluate">
+        <div class="wrap">
+            <div class="tit">近期新人評價</div>
+            <div class="con">
+                <div class="item clearfix">
+                    <div class="name">
+                        <p>pChanK</p>
+                        <p>2016年5月5日</p>
+                    </div>
+                    <div class="comment">
+                        <p>乾淨、服務好、位置極佳的場地、父母朋友都十分喜歡!!</p>
+                    </div>
+                    <div class="grade">
+                        <span>9.7</span>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="name">
+                        <p>pChanK</p>
+                        <p>2016年5月5日</p>
+                    </div>
+                    <div class="comment">
+                        <p>乾淨、服務好、位置極佳的場地、父母朋友都十分喜歡!!</p>
+                    </div>
+                    <div class="grade">
+                        <span>9.7</span>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="name">
+                        <p>pChanK</p>
+                        <p>2016年5月5日</p>
+                    </div>
+                    <div class="comment">
+                        <p>乾淨、服務好、位置極佳的場地、父母朋友都十分喜歡!!</p>
+                    </div>
+                    <div class="grade">
+                        <span>9.7</span>
+                    </div>
+                </div>
+                <div class="bottom clearfix">
+                    <div class="left fl">
+                        <a href="" class="show-more">顯示更多新人評價<span class="icon bg-img"></span></a>
+                    </div>
+                    <div class="right fr">
+                        <div class="reserve-btn-wrap" style="width:350px;display:inline-block;margin-bottom:10px;">
+                            <span style="color:#FF1131;">訂金為當晚最低消費的10%</span>
+                            <a href="javascript:;" class="reserve-btn bg-img"></a>
+                        </div>
+                        <p style="font-size:12px;text-align: right;"><span class="inline-block">如何計算最低消費</span><span class="icon bg-img question-icon"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--瀏覽這場地的客人同時也喜歡......-->
+    <div class="like">
+        <div class="wrap">
+            <div class="title">瀏覽這場地的客人同時也喜歡......</div>
+            <div class="content">
+                <div class="tit">
+                    <div class="item"><span>萬濤</span></div>
+                    <div class="item bg"><span>7折優惠</span></div>
+                    <div class="item text-right"><span>2016年11日14日</span></div>
+                </div>
+                <div class="top clearfix">
+                    <div class="carousel fl">
+                        <div class="slider">
+                            <div class="ul-box">
+                                <ul>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                    <li><a href="javascript:;"><img src="images/banner1.jpg"/></a></li>
+                                </ul>
+                            </div>
+                            <!--<div class="mask"></div>-->
+                            <div class="prev"></div>
+                            <div class="next"></div>
+
+                        </div>
+                    </div>
+                    <div class="info fl">
+                        <div class="address">沙田安平街1號香港沙田萬怡酒店商埸1樓<span class="icon bg-img"></span></div>
+                        <div style="margin-bottom:8px;">可容納席數24席</div>
+                        <div>可選擇<span class="red">中式婚宴</span>或<span class="red">西式自助餐</span></div>
+                        <div class="option" style="width:300px;">
+                            <div class="item c-j bg-img">
+                            </div>
+                            <div class="item d-p bg-img">
+                            </div>
+                            <div class="item t-z bg-img">
+                            </div>
+                            <div class="item t-s bg-img">
+                            </div>
+                            <!--<div class="item s-s">
+                            </div>
+                            <div class="item l-y">
+                            </div>-->
+                        </div>
+                        <div class="item-text">今日已有 71人瀏覽這場地</div>
+                        <div class="item-text">曾於3日16小時前被成功預訂</div>
+                        <div class="item-text">11月份剩下 15天可預訂</div>
+                     </div>
+                </div>
+                <div class="bottom-list">
+                    <div class="item">
+                        <div class="left">晚間-中式婚宴</div>
+                        <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                        <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                    </div>
+                    <div class="item">
+                        <div class="left">晚間-中式婚宴</div>
+                        <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                        <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                    </div>
+                    <div class="item">
+                        <div class="left">晚間-中式婚宴</div>
+                        <div class="middle">最低消費<span class="lowest-price">$30,000</span></div>
+                        <div class="right">原價<span class="cost-price">$5,688</span><span class="red">每席價格<b class="emphasize">$2,844</b>起</span></div>
+                    </div>
+                </div>
+                <div class="bottom-con">
+                    <span style="font-weight: bold;color:#FF1D4E;">+加到我的最愛</span>
+                    <a href="javascript:;" class="immediately-schedule bg-img"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部立即定购-->
+    <div class="order-bottom clearfix">
+        <div class="left fl">
+           <div class="con">
+                 <p>毋須即時選擇任何套餐，可留待次訂時決定選擇</p>
+                <p>預訂一經確認，所有餐單內容及價錢即時獲得保證</p>
+           </div>
+        </div>
+        <div class="right fl">
+            <div class="con">
+                <p>訂金為當晚最低消費的10%<a href="" class="immediately-btn bg-img"></a></p>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="public-footer">
+        <div class="wrap">
+            <div class="top">
+                <a href="">手機版網頁</a>
+                <a href="">常見問題</a>
+                <a href="">使用條款</a>
+                <a href="">聯絡我們</a>
+            </div>
+            <div class="middle">
+                <a href="" class="bottom-logo">logo</a>
+                <span class="line"></span>
+                <a href="" class="spotlight">博藝會</a>
+                <span class="line"></span>
+                <a href="" class="grand-stage">西港城•大舞壹</a>
+                <span class="line"></span>
+                <a href="" class="kowloonPeak">九龍半山</a>
+                <span class="line"></span>
+                <a href="" class="kowloonEast">九龍東</a>
+                <span class="line"></span>
+                <a href="" class="wat-t">銀灘</a>
+                <span class="line"></span>
+                <a href="" class="har-t">郵輪堤岸</a>
+                <span class="line"></span>
+                <a href="" class="riverView">萬濤</a>
+                <span class="line"></span>
+                <a href="" class="ropulseBay">淺水灣</a>
+                <span class="line"></span>
+                <a href="" class="c-park">科學園</a>
+                <span class="line"></span>
+                <a href="" class="oneBayEast">海濱長廊</a>
+                <span class="line"></span>
+                <a href="" class="prince">太子東提</a>
+                <span class="line"></span>
+                <a href="" class="loom">愉花園</a>
+                <span class="line"></span>
+            </div>
+            <div class="bottom">
+                <p>Copyright &copy; 2016. ClubONE All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!--測邊工具條-->
+    <div class="side-bar">
+        <a href="" class="email"></a>
+        <a href="" class="line"></a>
+        <a href="" class="tel"></a>
+        <a href="" class="favorable"></a>
+        <a href="" class="compute"></a>
+    </div>
+
+
+
+    <!-- 图片轮播 -->
+    <script src="js/imgSlider.js"></script>
+    <script>
+        //日期选择
+        if(document.attachEvent)   
+            window.attachEvent("onload", YYYYMMDDstart);   
+        else   
+            window.addEventListener('load', YYYYMMDDstart, false);  
+       $(function(){
+            img.init();
+            img.play(0);
+            //阻止事件冒泡
+            function estop(e){
+                var e=arguments.callee.caller.arguments[0]||event;
+                if (e && e.stopPropagation){
+                //因此它支持W3C的stopPropagation()方法
+                   e.stopPropagation();
+                }else{
+                //否则，我们需要使用IE的方式来取消事件冒泡
+                   window.event.cancelBubble = true;
+                   return false;
+                }
+            }
+
+           //隱藏下拉選擇
+            $('html').on('click',function(e){
+                //地區選擇
+                if(!$(e.target).hasClass('select-box-wrap') && !$(e.target).parents('div').hasClass('select-box-wrap')){
+                    $('.select-option').hide();
+                }
+                
+            })
+            //下拉选择
+            $('.select-box').click(function(){
+                if($('.select-option').is(":hidden")){
+                    $('.select-option').show();
+                }else{
+                    $('.select-option').hide();
+                }
+            })
+           //下拉地址选择
+           $('.confirm-btn').click(function(){
+               var isChecked = $('.option-item > .left > .checkbox-label').children('input:checked');
+               var text="";
+               for(var i = 0; i < isChecked.length;i++){
+                   if($(isChecked[i]).is(':checked')){
+                       if(i != isChecked.length-1){
+                           text+=$(isChecked[i]).siblings('.text').text()+'/';
+                       }else{
+                           text+=$(isChecked[i]).siblings('.text').text();
+                       }
+                   }
+
+               }
+               $('.select-box > .text').html(text);
+               $('.select-option').hide();
+
+           })
+           $('.option-item > .right > .checkbox-label').click(function(){
+               var checkboxs = $(this).parents('.right').find('input[type="checkbox"]');
+               for(var i = 0;i < checkboxs.length;i++){
+                   if($(checkboxs[i]).is(":checked")){
+                       $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=true;
+                       return;
+                   }
+               }
+               $(this).parents('.right').siblings('.left').find('input[type="checkbox"]')[0].checked=false;
+           })
+            //tab切换
+            $('.tab-title').children('a').click(function(){
+                $(this).addClass('active').siblings('a').removeClass('active');
+                var tabContent = $(this).parents('.tab-title').siblings('.tab-content').children('.item-con');
+                $(tabContent[$(this).index()]).addClass('active').siblings('.item-con').removeClass('active');
+            })
+           //关闭弹框
+           $('.close-btn').click(function(){
+               $(".over-pop").hide();
+           })
+
+           $('.tips-bar').click(function(){
+               var con = $(this).siblings('.bar-content');
+               if(con.is(':hidden')){
+                   $(this).addClass('tips-bar-down')
+                   con.show()
+               }else{
+                   $(this).removeClass('tips-bar-down')
+                   con.hide();
+               }
+           })
+       })
+    </script>
+    <script>
+        $(function(){
+            // 调用底部图片轮播
+            $('.slider').slider({
+                width : 330,
+                height : 208,
+                during : 2000, //动画执行间隔
+                speed : 500, //动画速度
+                btnSize : 20, //底部遮罩层的按钮大小
+                btnSpace : 10, //底部的按钮间隙
+                direction : 1 //轮播方向默认为1，图片向左移动
+            });
+        })
+    </script>
+</body>
+</html>
